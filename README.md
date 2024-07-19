@@ -1,5 +1,6 @@
 # *Be Petmily
-![KakaoTalk_20240719_115228053](https://github.com/user-attachments/assets/249f9698-7f6a-41dc-8820-07690876959f)
+![image](https://github.com/user-attachments/assets/2e8c2692-40a0-4fc1-8574-92996cfd1b34)
+
 
 ## 프로젝트 소개
 ### 프로젝트 주요 기능
