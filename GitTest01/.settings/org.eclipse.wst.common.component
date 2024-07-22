@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-        
-    <wb-module deploy-name="BePetmily">
-                
-        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                
-        <property name="java-output-path" value="/BePetmily/build/classes"/>
-        <property name="context-root" value="BePetmily"/>
             
-    </wb-module>
     
+    <wb-module deploy-name="GitTest01">
+                        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                        
+        
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+                        
+        
+        <property name="java-output-path" value="/GitTest01/build/classes"/>
+        <property name="context-root" value="GitTest01"/>
+                    
+    
+    </wb-module>
+        
+
 </project-modules>
