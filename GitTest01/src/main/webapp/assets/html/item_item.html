@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Petmily</title>
-    <link rel="stylesheet" href="../css/Base_style.css">
+    <title>제품 상세 페이지</title>
+    <link rel="stylesheet" href="../css/item_item.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,9 @@
                         <a href="item_list.html">사료</a>
                         <a href="#">간식</a>
                         <a href="#">용품</a>
-
+                        <a href="#">장난감</a>
+                        <a href="#">위생용품</a>    
+                        <a href="#">산책용품</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -47,11 +49,13 @@
                     </div>
                 </li>
             </ul>
-        </nav>
+        </nav> 
         <!-- 브레드크럼 네비게이션 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-base"><a href="main.html">홈</a></li>
+                <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>
+                <li class="breadcrumb-item active" aria-current="page">사료</li>
             </ol>
         </nav>
         <div class="user-options">
@@ -59,28 +63,47 @@
             <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
-    
+
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
         <main>
-            
+            <section class="product-detail-section">
+                <div class="product-detail-container">
+                    <div class="product-image">
+                        <img src="../img/Be_list01.png" alt="제품 이미지">
+                    </div>
+                    <div class="product-info">
+                        <h1>로얄캐닌 푸들 3kg 피모관리</h1>
+                        <p class="price">39,200원</p>
+                        <p>최저가 보장</p>
+                        <button>구매하기</button>
+                    </div>
+                </div>
+                <div class="product-description">
+                    <h2>상품설명</h2>
+                    <p>제품 설명 및 상세 정보가 여기에 들어갑니다.</p>
+                </div>
+                <div class="additional-info">
+                    <h2>이용안내</h2>
+                    <p>이용 안내 정보가 여기에 들어갑니다.</p>
+                </div>
+            </section>
+
+
+        
     </div>
-    
-            <!-- 배너: 전체 너비로 설정 -->
+        <!-- 배너: 전체 너비로 설정 -->
         <section class="banner">
-            <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+            <img src="/09.project1/project1-1/image/f.banner.png" alt="Be Petmily Banner">
         </section>
-           
-            <!-- <section class="content"> -->
-                <!-- 여기에 빈 공간을 확보하기 위해 height 설정 -->
-            <!-- </section> -->
+
         </main>
-    
+
     <footer class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-top-bar">
                 <span class="footer-lang">🌐 대한민국/한국어 </span>
-                <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="맨 위" srcset=""></a></span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="/09.project1/project1-1/image/맨 위 (2).png" alt="맨 위" srcset=""></a></span>
             </div>
             <hr> 
             <div class="footer-top">
@@ -129,11 +152,11 @@
                 <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
             </div>
             <div class="back-to-top">
-                <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="맨 위로"></a>
+                <a href="#" id="back-to-top"><img src="/09.project1/project1-1/image/up1.png" alt="맨 위로"></a>
             </div>
         </div>
     </footer>
-    
+
     <script>
         document.getElementById('back-to-top').addEventListener('click', function(e) {
             e.preventDefault();

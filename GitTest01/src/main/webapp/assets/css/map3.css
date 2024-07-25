@@ -7,16 +7,53 @@ body {
     min-height: 100vh;
 }
 
-
-/* 전체 공간설정, 동적  */
 .wrapper {
     flex: 1;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 150px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
-/*네이게이션쪽 */
+.map-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#map {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+}
+
+.location-list {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.location-list ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 레이아웃 */
+    gap: 10px; /* 항목 사이 간격 */
+}
+
+.location-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; /* 항목 가운데 정렬 */
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -25,7 +62,7 @@ header {
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
 }
-/* 로고 */
+
 .logo {
     margin-bottom: 0px;
 }
@@ -34,25 +71,57 @@ header {
     height: 140px;
 }
 
-/* 로고 바로 밑 선 */
 hr {
     width: 100%;
     border: none;
     border-top: 1px solid #ddd;
     margin: 10px 0;
 }
-/* 네비게이션 */
+
+/* base 기준 브레드크럼 변경됨 */
+.breadcrumb {
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* 항목 사이에 간격 추가 */
+}
+
+/* base 기준 item 추가 코드 */
+.breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+/* base 기준 item 추가 코드 */
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 5px; /* 항목 사이 간격 */
+}
+
+/* base 기준 item 추가 코드 */
+.breadcrumb-item span {
+    color: #6c757d;
+    margin-right: 5px; /* 항목 사이 간격 */
+}
+
+/* base 기준 item 추가 코드 */
+.breadcrumb-item.active a {
+    pointer-events: none;
+    color: #6c757d;
+}
+
 nav {
     margin: 5px;
     display: flex;
     justify-content: center;
     width: 100%;
 }
-nav ul li.dropdown {
-    position: relative;
-    display: inline-block;
-    
-}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -62,67 +131,17 @@ nav ul {
     margin: 0;
 }
 
-  /* nav ul li a {
-    margin: 60px;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px; /* nav 글자 크기 조정 */
-              
+nav ul li.dropdown {
+    position: relative;
+    display: inline-block;
+}
 
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 18px; /* 글자 크기, 필요에 따라 조절 */
-    padding: 10px 60px; /* 메인 메뉴 항목의 패딩 조정 */
+    font-size: 18px;
+    padding: 10px 60px;
 }
-
-.user-options {
-    margin-top: 50px;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    display: flex;
-    gap: 20px;
-}
-
-.user-options a img {
-    height: 30px;
-}
-
-/* 네비게이션 아래 브레이크드럼 */
-.breadcrumb {
-    padding: 8px 15px; /* 내부 여백 설정 */
-    background-color: #f8f9fa; /* 배경 색상 */
-    border-radius: 5px; /* 모서리 둥글게 처리 */
-    list-style: none; /* 목록 앞의 기본 마커(숫자나 점) 제거 */
-    display: flex; /* 플렉스박스 모델 적용 */
-    gap: 5px; /* 아이템 사이의 간격 */
-}
-
-.breadcrumb-item a {
-    text-decoration: none; /* 링크 밑줄 제거 */
-    color: #007bff; /* 링크 색상 */
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    content: ">"; /* 각 항목 사이에 '>' 기호 삽입 */
-    padding: 0 5px; /* '>' 기호 주변 여백 */
-    color: #6c757d; /* '>' 기호 색상 */
-}
-
-.breadcrumb-item.active {
-    color: #6c757d; /* 활성 항목 색상 변경 */
-    pointer-events: none; /* 활성 항목에 대한 마우스 이벤트 비활성화 (클릭 불가능) */
-}
-
-.breadcrumb-item {
-  /*  margin-right: 1000px; /* 오른쪽에 마진 추가 */
-  /*  padding: 5px 10px; /* 패딩 조정 */
-  display: flex;
-  align-items: center;
-}
-
-
 
 .dropdown-content {
     display: none;
@@ -163,21 +182,75 @@ nav ul li.dropdown.health-tab .dropdown-content {
 }
 
 
-/* wrapper 아래 메인 콘텐츠 & 푸터를 중앙에 배치 */
+.user-options {
+    margin-top: 50px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.user-options a img {
+    height: 30px;
+}
+
 main {
     flex: 1;
 }
 
+.content {
+    padding: 20px;
+}
 
-/* 상품 */
+.product-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 
-/* 배너 */
+.product-content img {
+    width: 200px;
+    height: auto;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h1 {
+    margin: 0;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.product-info .price {
+    font-size: 1.5em;
+    color: #f00;
+    margin: 10px 0;
+}
+
+.product-info button {
+    padding: 10px 20px;
+    background-color: #f90;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
 .banner img {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
-/* 하단 */
+
 .footer-wrapper {
     background-color: #333;
     color: #fff;
@@ -191,7 +264,7 @@ main {
     text-align: left;
     padding: 0px;
 }
-/* 하단_상단 */
+
 .footer-top-bar {
     display: flex;
     justify-content: space-between;
@@ -200,7 +273,6 @@ main {
 
 .footer-top-bar .footer-lang {
     float: left;
-    
 }
 
 .footer-top-bar .footer-top {
@@ -233,7 +305,6 @@ main {
     color: #fff;
 }
 
-/* 하단_중단 */
 .footer-contact {
     text-align: left;
     font-size: 10px;
@@ -248,7 +319,6 @@ main {
     text-decoration: none;
 }
 
-/* 하단_하단 */
 .footer-bottom {
     text-align: center;
 }
@@ -258,7 +328,6 @@ main {
     font-size: 8px;
 }
 
-/* 하단_맨 위로 아이콘1 */
 .back-to-top {
     text-align: center;
     margin-top: 0px;
@@ -269,7 +338,6 @@ main {
     text-decoration: none;
 }
 
-/* 하단_맨 위로 아이콘2 */
 .back-to-top img {
     width: 50px;
     height: 50px;
@@ -278,5 +346,3 @@ main {
     bottom: 20px;
     cursor: pointer;
 }
-/* /////////////////베이스 공통 틀/////////////////////////// */
-

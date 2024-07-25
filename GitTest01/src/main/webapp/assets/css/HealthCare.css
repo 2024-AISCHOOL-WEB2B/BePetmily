@@ -89,7 +89,8 @@ nav ul li a {
     height: 30px;
 }
 
-/* 네비게이션 아래 브레이크드럼 */
+/* base 기준 item 추가 코드 */
+/* base 기준 브레드크럼 변경됨 */
 .breadcrumb {
     padding: 8px 15px; /* 내부 여백 설정 */
     background-color: #f8f9fa; /* 배경 색상 */
@@ -97,30 +98,32 @@ nav ul li a {
     list-style: none; /* 목록 앞의 기본 마커(숫자나 점) 제거 */
     display: flex; /* 플렉스박스 모델 적용 */
     gap: 5px; /* 아이템 사이의 간격 */
+    align-items: center;
 }
-
-.breadcrumb-item a {
-    text-decoration: none; /* 링크 밑줄 제거 */
-    color: #007bff; /* 링크 색상 */
-}
-
-.breadcrumb-item + .breadcrumb-item::before {
-    content: ">"; /* 각 항목 사이에 '>' 기호 삽입 */
-    padding: 0 5px; /* '>' 기호 주변 여백 */
-    color: #6c757d; /* '>' 기호 색상 */
-}
-
-.breadcrumb-item.active {
-    color: #6c757d; /* 활성 항목 색상 변경 */
-    pointer-events: none; /* 활성 항목에 대한 마우스 이벤트 비활성화 (클릭 불가능) */
-}
-
+/* base 기준 item 추가 코드 */
 .breadcrumb-item {
-  /*  margin-right: 1000px; /* 오른쪽에 마진 추가 */
-  /*  padding: 5px 10px; /* 패딩 조정 */
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+/* base 기준 item 추가 코드 */
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 5px;
+}
+/* base 기준 item 추가 코드 */
+.breadcrumb-item span {
+    margin-right: 5px;
+    color: #6c757d;
+}
+/* base 기준 item 추가 코드 */
+.breadcrumb-item.active a {
+    pointer-events: none;
+    color: #6c757d;
+}
+
+
+
 
 
 
@@ -163,14 +166,103 @@ nav ul li.dropdown.health-tab .dropdown-content {
 }
 
 
+
+
 /* wrapper 아래 메인 콘텐츠 & 푸터를 중앙에 배치 */
 main {
     flex: 1;
 }
+.custom-info {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
 
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.info-box.small {
+    grid-column: span 1;
+}
+
+.info-box.large {
+    grid-column: span 2;
+}
+
+.info-image {
+    width: 100%;
+    height: 150px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+}
+
+.info-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.content {
+    padding: 20px;
+}
 
 /* 상품 */
+.product-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
 
+.product-content img {
+    width: 200px;
+    height: auto;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h1 {
+    margin: 0;
+}
+
+.product-info p {
+    margin: 5px 0;
+}
+
+.product-info .price {
+    font-size: 1.5em;
+    color: #f00;
+    margin: 10px 0;
+}
+
+.product-info button {
+    padding: 10px 20px;
+    background-color: #f90;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
 /* 배너 */
 .banner img {
     width: 100%;

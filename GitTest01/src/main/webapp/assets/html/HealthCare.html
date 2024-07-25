@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Petmily</title>
-    <link rel="stylesheet" href="../css/Base_style.css">
+    <title>맞춤형 정보</title>
+    <link rel="stylesheet" href="../css/HealthCare.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,9 @@
                         <a href="item_list.html">사료</a>
                         <a href="#">간식</a>
                         <a href="#">용품</a>
-
+                        <a href="#">장난감</a>
+                        <a href="#">위생용품</a>    
+                        <a href="#">산책용품</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -51,7 +53,9 @@
         <!-- 브레드크럼 네비게이션 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-base"><a href="main.html">홈</a></li>
+                <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item active" aria-current="page">건강정보</li>
+
             </ol>
         </nav>
         <div class="user-options">
@@ -59,23 +63,39 @@
             <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
-    
-    <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
-    <div class="wrapper">
-        <main>
-            
-    </div>
-    
-            <!-- 배너: 전체 너비로 설정 -->
-        <section class="banner">
-            <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+
+    <main>
+        <section class="custom-info">
+            <div class="info-container">
+                <div class="info-box small">
+                    <div class="info-image"></div>
+                    <div class="info-text">제품 정보</div>
+                </div>
+                <div class="info-box large">
+                    <div class="info-image"></div>
+                    <div class="info-text">제품 정보</div>
+                </div>
+                <div class="info-box small">
+                    <div class="info-image"></div>
+                    <div class="info-text">제품 정보</div>
+                </div>
+                <div class="info-box small">
+                    <div class="info-image"></div>
+                    <div class="info-text">제품 정보</div>
+                </div>
+                <div class="info-box small">
+                    <div class="info-image"></div>
+                    <div class="info-text">제품 정보</div>
+                </div>
+            </div>
         </section>
-           
-            <!-- <section class="content"> -->
-                <!-- 여기에 빈 공간을 확보하기 위해 height 설정 -->
-            <!-- </section> -->
-        </main>
-    
+
+        <!-- 배너: 전체 너비로 설정 -->
+        <!-- <section class="banner">
+            <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+        </section> -->
+    </main>
+
     <footer class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-top-bar">
@@ -133,11 +153,14 @@
             </div>
         </div>
     </footer>
-    
+
     <script>
-        document.getElementById('back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
+        document.addEventListener('DOMContentLoaded', function() {
+            var backToTopButton = document.getElementById('back-to-top');
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            });
         });
     </script>
 </body>

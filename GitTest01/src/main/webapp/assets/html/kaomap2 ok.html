@@ -1,0 +1,265 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 위치 기반 서비스</title>
+    
+    <link rel="stylesheet" href="../css/map3.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d65efe482352843c1373a29f486cdb0f"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a>제품</a>
+                    <div class="dropdown-content">
+                        <a href="item_list.html">사료</a>
+                        <a href="#">간식</a>
+                        <a href="#">용품</a>
+                        <a href="#">장난감</a>
+                        <a href="#">위생용품</a>    
+                        <a href="#">산책용품</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a >시설</a>
+                    <div class="dropdown-content">
+                        <a href="#">병원</a>
+                        <a href="#">숙박</a>
+                        <a href="#">카페</a>
+                        <a href="kaomap2 ok.html">주변위치</a>
+                    </div>
+                </li>
+                <li class="dropdown health-tab"> <!-- 여기서 클래스 추가 -->
+                    <a>맞춤형 정보</a>
+                    <div class="dropdown-content">
+                        <a href="HealthCare.html" class="moveable">건강관리</a>
+                        <a href="#" class="moveable">질병예측</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a >커뮤니티</a>
+                    <div class="dropdown-content">
+                        <!-- <a href="#">자주묻는 질문</a> -->
+                        <a href="#">앨범게시판</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- 브레드크럼 네비게이션 -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item active" aria-current="page">주변 위치</li>
+            </ol>
+        </nav>
+        <div class="user-options">
+            <a href="#"><img src="../img/Base_user.png" alt="User Icon"></a>
+            <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
+        </div>
+    </header>
+
+    <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
+    <div class="wrapper">
+        <main>
+            <section class="map-section">
+                <div id="map" style="width:600px;height:400px;"></div>
+                <div class="location-list">
+                   <!--<h2>가까운 장소</h2>  --> 
+                    <ul id="places-list">
+                        <!-- 가까운 장소 목록이 여기에 추가됩니다 -->
+                    </ul>
+                </div>
+            </section>
+    </div>
+        </main>
+        <!-- 배너: 전체 너비로 설정 -->
+        <section class="banner">
+            <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+        </section>
+
+    <footer class="footer-wrapper">
+        <div class="footer-container">
+            <div class="footer-top-bar">
+                <span class="footer-lang">🌐 대한민국/한국어 </span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="/09.project1/project1-1/image/맨 위 (2).png" alt="맨 위" srcset=""></a></span>
+            </div>
+            <hr> 
+            <div class="footer-top">
+                <div class="footer-links">
+                    <h3>제품</h3>
+                    <ul>
+                        <li><a href="item_list.html">사료</a></li>
+                        <li><a href="#">간식</a></li>
+                        <li><a href="#">용품</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>애견 관련 시설</h3>
+                    <ul>
+                        <li><a href="#">병원</a></li>
+                        <li><a href="#">숙박</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="kaomap2 ok.html">주변위치</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>맞춤형 정보</h3>
+                    <ul>
+                        <li><a href="HealthCare.html">건강관리</a></li>
+                        <li><a href="#">질병예측</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>커뮤니티</h3>
+                    <ul>
+                        <!-- <li><a href="#">자주 묻는 질문</a></li> -->
+                        <li><a href="#">자유 게시판</a></li>
+                    </ul>   
+                </div>
+            </div>
+            <hr>
+            <div class="footer-contact">
+                <p>Be Petmily와 상담하세요</p>
+                <p>평일 09:00 ~ 18:00 주말/공휴일 휴무</p>
+                <p>070-123-4567</p>
+                <a href="mailto:info@bepetmily.com">문의하기</a>
+            </div>
+            <div class="footer-bottom">
+                <p>개인정보 보호센터 | 법률정보 | 개인정보 처리방침</p>
+                <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
+            </div>
+            <div class="back-to-top">
+                <a href="#" id="back-to-top"><img src="/09.project1/project1-1/image/up1.png" alt="맨 위로"></a>
+            </div>
+        </div>
+    </footer>
+
+<!-- 카카오 맵 및 위치 정보 스크립트 -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // 지도 표시할 컨테이너와 옵션 설정
+        var mapContainer = document.getElementById('map'); // 지도를 표시할 div
+        var mapOption = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심 좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+        // 지도를 생성
+        var map = new kakao.maps.Map(mapContainer, mapOption);
+
+        // 사용자의 현재 위치를 얻기 위해 HTML5의 geolocation을 사용할 수 있는지 확인
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude; // 위도
+                var lon = position.coords.longitude; // 경도
+                
+                // 특정 위치일 때 새로운 값으로 변경
+                if (lat === 35.150654 && lon === 126.9131115) {
+                    lat = 35.14663;
+                    lon = 126.92228;
+                }
+                // 위도와 경도를 콘솔에 출력
+                console.log('Latitude:', lat, 'Longitude:', lon);
+                
+                var locPosition = new kakao.maps.LatLng(lat, lon); // 사용자 위치로 생성된 좌표
+                map.setCenter(locPosition); // 지도 중심을 사용자 위치로 설정
+
+                var marker = new kakao.maps.Marker({
+                    position: locPosition // 마커 위치를 사용자 위치로 설정
+                });
+                marker.setMap(map); // 지도의 마커 표시
+
+                // 테스트용 장소 데이터 배열
+                const placesData = [
+                    {name: '장소1', address: '주소1', phone: '전화번호1', lat: 37.5665, lon: 126.9780},
+                    {name: '장소2', address: '주소2', phone: '전화번호2', lat: 37.5651, lon: 126.9895},
+                    {name: '장소3', address: '주소3', phone: '전화번호3', lat: 37.5642, lon: 126.9931},
+                    {name: '장소4', address: '주소4', phone: '전화번호4', lat: 37.5634, lon: 126.9962},
+                    {name: '장소5', address: '주소5', phone: '전화번호5', lat: 37.5628, lon: 126.9981},
+                    {name: '장소6', address: '주소6', phone: '전화번호6', lat: 37.5615, lon: 127.0011},
+                    {name: '장소7', address: '주소7', phone: '전화번호7', lat: 37.5609, lon: 127.0030},
+                    {name: '장소8', address: '주소8', phone: '전화번호8', lat: 37.5599, lon: 127.0045},
+                    {name: '장소9', address: '주소9', phone: '전화번호9', lat: 37.5587, lon: 127.0065},
+                    {name: '장소10', address: '주소10', phone: '전화번호10', lat: 37.5576, lon: 127.0085},
+                    {name: '장소11', address: '주소11', phone: '전화번호11', lat: 37.5565, lon: 127.0105},
+                ];
+
+                // 사용자 위치와 각 장소 간의 거리 계산
+                placesData.forEach(function(place) {
+                    var distance = calculateDistance(lat, lon, place.lat, place.lon) / 1000; // km 단위로 변환
+                    place.distance = distance; // 각 장소 객체에 거리 추가
+                });
+
+                // 거리 기준으로 정렬
+                placesData.sort(function(a, b) {
+                    return a.distance - b.distance; // 오름차순 정렬
+                });
+
+                // 상위 10개 장소 표시
+                var top10 = placesData.slice(0, 8); // 상위 10개 선택
+                var placesList = document.getElementById('places-list');
+                placesList.innerHTML = ''; // 기존 목록 초기화
+                top10.forEach(function(place) {
+                    var li = document.createElement('li'); // 리스트 항목 생성
+                    li.innerHTML = `
+                        <strong>건물 이름:</strong> ${place.name}<br>
+                        <strong>주소:</strong> ${place.address}<br>
+                        <strong>전화번호:</strong> ${place.phone}<br>
+                        <strong>가까운 거리:</strong> ${place.distance.toFixed(2)} km
+                    `; // 장소 정보 표시
+                    placesList.appendChild(li); // 목록에 항목 추가
+                });
+            }, function(error) {
+                console.error('Error occurred. Error code: ' + error.code);
+                // error.code can be:
+                // 0: unknown error
+                // 1: permission denied
+                // 2: position unavailable (error response from location provider)
+                // 3: timed out
+            }, {
+                enableHighAccuracy: true, // 고정밀도 모드
+                timeout: 5000, // 타임아웃 설정
+                maximumAge: 0 // 위치 정보 캐시 사용 안 함
+            });
+        } else {
+            // GeoLocation을 사용할 수 없을 때 기본 위치 설정
+            var locPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+            map.setCenter(locPosition); // 지도 중심을 기본 위치로 설정
+
+            var marker = new kakao.maps.Marker({
+                position: locPosition // 마커 위치를 기본 위치로 설정
+            });
+            marker.setMap(map); // 지도에 마커 표시
+        }
+
+        // 두 지점 간의 거리를 계산하는 함수 (단위: 미터)
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371e3; // 지구 반경 (미터)
+            const φ1 = lat1 * Math.PI / 180; // φ, λ in radians
+            const φ2 = lat2 * Math.PI / 180;
+            const Δφ = (lat2 - lat1) * Math.PI / 180;
+            const Δλ = (lon2 - lon1) * Math.PI / 180;
+
+            const a = Math.sin(Δφ / 2) * Math.sin(Δφ / 2) +
+                      Math.cos(φ1) * Math.cos(φ2) *
+                      Math.sin(Δλ / 2) * Math.sin(Δλ / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+
+            const distance = R * c; // in metres
+            return distance; // 거리 반환
+        }
+    });
+</script>
+
+
+</body>
+</html>
