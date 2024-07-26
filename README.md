@@ -6,7 +6,7 @@
 
 ## 👋 프로젝트 소개 
 
-반려 동물 소유자에게 반려동물의 질병 정보를 주는!💜 <br>
+반려 동물 소유자에게 반려동물 관련 종합 정보를 제공하는 💜 <br>
 원스톱 플랫폼입니다. 🐶🐶<br>
 
 ## 🌳 개발 내용
@@ -14,6 +14,10 @@
 -위치기반 주변 반려동물 시설 정보 제공 <br>
 -알러지 맞춤 제품 추천 기능<br>
 -앨범 게시판 기능 <br>
+
+##  ⚙유스케이스
+![KakaoTalk_20240717_091155469](https://github.com/user-attachments/assets/7c9ff706-b18f-4400-b0ec-451d60eb5b14)
+
 
 ### ✨달성 목표✨
 -애견인을 위한 개인 맞춤형 정보 제공 웹 페이지 개발<br>
@@ -32,7 +36,7 @@ All participants in this project 🖥🖱
 | Name             | Email                 | Github                           | Role      |
 |------------------|-----------------------|----------------------------------|-----------|
 | 🧒🏻Jae Hun Choi  | why7017@naver.com    |https://github.com/czarmagnate                  | Back-end |
-| 👦 Jae Ho Jung  | email   | https://github.com/               | Front-end |
+| 👦 Jae Ho Jung  | email   |https://github.com/LOOKSHINE0205              | Front-end |
 | 👧🏻Eun Hwa Choi  | ehchoi0318@naver.com     | https://github.com/choi-eunhwa | Back-end |
 | 👱🏻‍♂️ Ji Gwang Park| emil | https://github.com/| Front-end  |
 | 👩🏻 Ji Ho Kim    | email    | https://github.com/                    | Front-end  |
