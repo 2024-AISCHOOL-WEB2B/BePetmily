@@ -1,9 +1,5 @@
-
+<div align="center">
   # 🐾Be PetMily🐾
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=f7f5f5&height=200&text=BePetMily!&animation=fadeIn&fontSize=80&fontAlignY=35"/>
-
-
-
 
 ## 👋 프로젝트 소개 
 ![bepetmily](https://github.com/user-attachments/assets/d3266b6f-27dd-4012-b4ae-79200d83b188)
@@ -38,3 +34,6 @@ All participants in this project 🖥🖱
 | 👧🏻Eun Hwa Choi  | ehchoi0318@naver.com     | https://github.com/choi-eunhwa | Back-end |
 | 👱🏻‍♂️ Ji Gwang Park| emil | https://github.com/| Front-end  |
 | 👩🏻 Ji Ho Kim    | email    | https://github.com/                    | Front-end  |
+
+
+</div>
