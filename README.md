@@ -1,9 +1,10 @@
 <div align="center">
 
 # 🐾Be PetMily🐾
+![bepetmily](https://github.com/user-attachments/assets/1471a691-bdb5-46bc-b546-9d0376edd976)
 
 </div>
-![KakaoTalk_20240719_115228053](https://github.com/user-attachments/assets/0cda4d10-da6a-4be8-a49b-125ba9ebf571)
+
 
 ## 👋 프로젝트 소개 
 
