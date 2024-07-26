@@ -33,7 +33,7 @@
 All participants in this project 🖥🖱
 | Name             | Email                 | Github                           | Role      |
 |------------------|-----------------------|----------------------------------|-----------|
-| 🧒🏻Jae Hun Choi  | email    |https://github.com/czarmagnate                  | Back-end |
+| 🧒🏻Jae Hun Choi  | why7017@naver.com    |https://github.com/czarmagnate                  | Back-end |
 | 👦 Jae Ho Jung  | email   | https://github.com/               | Front-end |
 | 👧🏻Eun Hwa Choi  | ehchoi0318@naver.com     | https://github.com/choi-eunhwa | Back-end |
 | 👱🏻‍♂️ Ji Gwang Park| emil | https://github.com/| Front-end  |
