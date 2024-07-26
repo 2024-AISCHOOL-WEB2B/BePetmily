@@ -1,4 +1,4 @@
-<div align="center">
+
   # 🐾Be PetMily🐾
 
 ## 👋 프로젝트 소개 
@@ -36,4 +36,3 @@ All participants in this project 🖥🖱
 | 👩🏻 Ji Ho Kim    | email    | https://github.com/                    | Front-end  |
 
 
-</div>
