@@ -15,7 +15,7 @@
 -알러지 맞춤 제품 추천 기능<br>
 -앨범 게시판 기능 <br>
 
-##  ⚙유스케이스
+##  ⚙ 유스케이스
 ![KakaoTalk_20240717_091155469](https://github.com/user-attachments/assets/7c9ff706-b18f-4400-b0ec-451d60eb5b14)
 
 
