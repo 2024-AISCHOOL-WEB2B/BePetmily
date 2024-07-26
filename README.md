@@ -3,14 +3,12 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=ece700&height=200&text=BePetMily!&animation=fadeIn&fontSize=80&fontAlignY=35"/>
 
 <div align="center">
-# 🐾Be PetMily🐾
-
-![bepetmily](https://github.com/user-attachments/assets/d3266b6f-27dd-4012-b4ae-79200d83b188)
-
+  🐾Be PetMily🐾
 </div>
 
 
 ## 👋 프로젝트 소개 
+![bepetmily](https://github.com/user-attachments/assets/d3266b6f-27dd-4012-b4ae-79200d83b188)
 
 반려 동물 소유자에게 반려동물의 질병 정보를 주는!💜 <br>
 원스톱 플랫폼입니다. 🐶🐶<br>
