@@ -27,11 +27,14 @@
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
 
-    
-  
-    
   </div>
 
-
-
-
+## Contributors
+All participants in this project are majoring in Computer Science Engieneering, Dongguk University🏫
+| Name             | Email                 | Github                           | Role      |
+|------------------|-----------------------|----------------------------------|-----------|
+| 🧒🏻Jae Hun Choi  | email    |https://github.com/czarmagnate                  | Back-end |
+| 👱🏻‍♀️ Jae Ho Jung  | email   | https://github.com/               | Front-end |
+| 👧🏻Eun Hwa Choi  | ehchoi0318@naver.com     | https://github.com/choi-eunhwa | Back-end |
+| 👱🏻‍♂️ Ji Gwang Park| emil | https://github.com/| Front-end  |
+| 👩🏻 Ji Ho Kim    | email    | https://github.com/                    | Front-end  |
