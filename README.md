@@ -1,10 +1,12 @@
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ece700&height=200&text=Be PetMily !&animation=fadeIn&fontSize=80&fontAlignY=35"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=ece700&height=200&text=Welcome!&animation=fadeIn&fontSize=80&fontAlignY=35"/>
 
 <div align="center">
 # 🐾Be PetMily🐾
-![img1](https://github.com/user-attachments/assets/2774d0a7-e6ee-42a6-a5ff-a564ea128866)
+
+![bepetmily](https://github.com/user-attachments/assets/d3266b6f-27dd-4012-b4ae-79200d83b188)
+
 </div>
 
 
