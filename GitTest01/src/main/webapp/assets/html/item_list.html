@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Petmily</title>
+    <title>제품 리스트 페이지</title>
+    <link rel="stylesheet" href="../css/Base_style.css">
     <link rel="stylesheet" href="../css/item_list.css">
 </head>
 <body>
@@ -11,50 +12,53 @@
         <div class="logo">
             <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
-        <hr>
-        <nav>
+        
+        <!-- 주 네비게이션 -->
+        <nav class="main-nav">
             <ul>
-                <li class="dropdown">
+                <!-- 개별 드롭다운 메뉴 설정 -->
+                <li class="dropdown products-tab">
                     <a>제품</a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content products-content">
                         <a href="item_list.html">사료</a>
                         <a href="#">간식</a>
                         <a href="#">용품</a>
-                        <a href="#">장난감</a>
-                        <a href="#">위생용품</a>    
-                        <a href="#">산책용품</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a >시설</a>
-                    <div class="dropdown-content">
+                <li class="dropdown facilities-tab">
+                    <a>시설</a>
+                    <div class="dropdown-content facilities-content">
                         <a href="#">병원</a>
                         <a href="#">숙박</a>
-                        <a href="#">카페</a>
+                        <a href="#">카페/식당</a>
+                        <a href="#">기타시설</a>
                         <a href="kaomap2 ok.html">주변위치</a>
                     </div>
                 </li>
-                <li class="dropdown health-tab"> <!-- 여기서 클래스 추가 -->
+                <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content health-content">
                         <a href="HealthCare.html" class="moveable">건강관리</a>
                         <a href="#" class="moveable">질병예측</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a >커뮤니티</a>
-                    <div class="dropdown-content">
-                        <!-- <a href="#">자주묻는 질문</a> -->
-                        <a href="#">앨범게시판</a>
+                <li class="dropdown community-tab">
+                    <a>커뮤니티</a>
+                    <div class="dropdown-content community-content">
+                        <a href="#">자유게시판</a>
                     </div>
                 </li>
             </ul>
         </nav>
+        <hr>
         <!-- 브레드크럼 네비게이션 -->
+        <div class="nav-background"></div>
+        <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
-                <li class="breadcrumb-item active" aria-current="page">제품</li>
+                 <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>
+              <!--  <li class="breadcrumb-item active" aria-current="page">사료</li> -->
             </ol>
         </nav>
         <div class="user-options">
@@ -62,204 +66,246 @@
             <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
-    
+
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
-        <main>
-            <div class="container">
-                <div class="product-grid">
-                    <!-- 제품 상세 콘텐츠 예시 20개 -->
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <!-- 이와 같은 블록을 19개 더 추가 -->
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
-                    </div>
-                    <div class="product-detail">
-                        <h1>제품 이름</h1>
-                        <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
-                        <p>제품 설명 및 상세 정보</p>
-                        <button>구매하기</button>
+            <main>
+                <div class="container">
+                    <div class="product-grid">
+                        <!-- 제품 상세 콘텐츠 예시 -->
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <!-- 이와 같은 블록을 19개 더 추가 -->
+                       
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
+                        <div class="product-detail">
+                            <a href="#"><img src="/09.project1/project1-1/image/1.png" alt="제품 이미지"></a>
+                            <h1>제품 이름</h1>
+                            <p>제품 설명 및 상세 정보</p>
+                            <form action="buy.html" method="get">
+                                <button type="submit">구매하기</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+        </div>
+            
+
     </div>
         </main>
-                        <!-- 배너: 전체 너비로 설정 -->
+    <!-- 배너: 전체 너비로 설정 -->
     <section class="banner">
         <img src="../img/Base_banner.png" alt="Be Petmily Banner">
     </section>
-
-        
-    
-        <footer class="footer-wrapper">
-            <div class="footer-container">
-                <div class="footer-top-bar">
-                    <span class="footer-lang">🌐 대한민국/한국어 </span>
-                    <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="맨 위" srcset=""></a></span>
+    <footer class="footer-wrapper">
+        <div class="footer-container">
+            <div class="footer-top-bar">
+                <span class="footer-lang">🌐 대한민국/한국어 </span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="맨 위" srcset=""></a></span>
+            </div>
+            <hr> 
+            <div class="footer-top">
+                <div class="footer-links">
+                    <h3>제품</h3>
+                    <ul>
+                        <li><a href="item_list.html">사료</a></li>
+                        <li><a href="#">간식</a></li>
+                        <li><a href="#">용품</a></li>
+                    </ul>
                 </div>
-                <hr> 
-                <div class="footer-top">
-                    <div class="footer-links">
-                        <h3>제품</h3>
-                        <ul>
-                            <li><a href="item_list.html">사료</a></li>
-                            <li><a href="#">간식</a></li>
-                            <li><a href="#">용품</a></li>
-    
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3>애견 관련 시설</h3>
-                        <ul>
-                            <li><a href="#">병원</a></li>
-                            <li><a href="#">숙박</a></li>
-                            <li><a href="#">카페</a></li>
-                            <li><a href="kaomap2 ok.html">주변위치</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3>맞춤형 정보</h3>
-                        <ul>
-                            <li><a href="HealthCare.html">건강관리</a></li>
-                            <li><a href="#">질병예측</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-links">
-                        <h3>커뮤니티</h3>
-                        <ul>
-                            <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                            <li><a href="#">자유 게시판</a></li>
-                        </ul>   
-                    </div>
+                <div class="footer-links">
+                    <h3>애견 관련 시설</h3>
+                    <ul>
+                        <li><a href="#">병원</a></li>
+                        <li><a href="#">숙박</a></li>
+                        <li><a href="#">카페</a></li>
+                        <li><a href="kaomap2 ok.html">주변위치</a></li>
+                    </ul>
                 </div>
-                <hr>
-                <div class="footer-contact">
-                    <p>Be Petmily와 상담하세요</p>
-                    <p>평일 09:00 ~ 18:00 주말/공휴일 휴무</p>
-                    <p>070-123-4567</p>
-                    <a href="mailto:info@bepetmily.com">문의하기</a>
+                <div class="footer-links">
+                    <h3>맞춤형 정보</h3>
+                    <ul>
+                        <li><a href="HealthCare.html">건강관리</a></li>
+                        <li><a href="#">질병예측</a></li>
+                    </ul>
                 </div>
-                <div class="footer-bottom">
-                    <p>개인정보 보호센터 | 법률정보 | 개인정보 처리방침</p>
-                    <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
-                </div>
-                <div class="back-to-top">
-                    <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="맨 위로"></a>
+                <div class="footer-links">
+                    <h3>커뮤니티</h3>
+                    <ul>
+                        <!-- <li><a href="#">자주 묻는 질문</a></li> -->
+                        <li><a href="#">자유게시판</a></li>
+                    </ul>   
                 </div>
             </div>
-        </footer>
-    
+            <hr>
+            <div class="footer-contact">
+                <p>Be Petmily와 상담하세요</p>
+                <p>평일 09:00 ~ 18:00 주말/공휴일 휴무</p>
+                <p>070-123-4567</p>
+                <a href="mailto:info@bepetmily.com">문의하기</a>
+            </div>
+            <div class="footer-bottom">
+                <p>개인정보 보호센터 | 법률정보 | 개인정보 처리방침</p>
+                <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
+            </div>
+            <div class="back-to-top">
+                <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="맨 위로"></a>
+            </div>
+        </div>
+    </footer>
+
     <script>
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity < 1) {
+                newQuantity = 1;
+            }
+            quantityInput.value = newQuantity;
+            updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+            var quantity = document.getElementById('quantity').value;
+            var price = 39200;
+            var totalPrice = price * quantity;
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString() + '원';
+        }
+
         document.getElementById('back-to-top').addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({top: 0, behavior: 'smooth'});

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>맞춤형 정보</title>
+    <title>건강관리</title>
+    <link rel="stylesheet" href="../css/Base_style.css">
     <link rel="stylesheet" href="../css/HealthCare.css">
 </head>
 <body>
@@ -11,51 +12,53 @@
         <div class="logo">
             <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
-        <hr>
-        <nav>
+        
+        <!-- 주 네비게이션 -->
+        <nav class="main-nav">
             <ul>
-                <li class="dropdown">
+                <!-- 개별 드롭다운 메뉴 설정 -->
+                <li class="dropdown products-tab">
                     <a>제품</a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content products-content">
                         <a href="item_list.html">사료</a>
                         <a href="#">간식</a>
                         <a href="#">용품</a>
-                        <a href="#">장난감</a>
-                        <a href="#">위생용품</a>    
-                        <a href="#">산책용품</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a >시설</a>
-                    <div class="dropdown-content">
+                <li class="dropdown facilities-tab">
+                    <a>시설</a>
+                    <div class="dropdown-content facilities-content">
                         <a href="#">병원</a>
                         <a href="#">숙박</a>
-                        <a href="#">카페</a>
+                        <a href="#">카페/식당</a>
+                        <a href="#">기타시설</a>
                         <a href="kaomap2 ok.html">주변위치</a>
                     </div>
                 </li>
-                <li class="dropdown health-tab"> <!-- 여기서 클래스 추가 -->
+                <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content health-content">
                         <a href="HealthCare.html" class="moveable">건강관리</a>
                         <a href="#" class="moveable">질병예측</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a >커뮤니티</a>
-                    <div class="dropdown-content">
-                        <!-- <a href="#">자주묻는 질문</a> -->
-                        <a href="#">앨범게시판</a>
+                <li class="dropdown community-tab">
+                    <a>커뮤니티</a>
+                    <div class="dropdown-content community-content">
+                        <a href="#">자유게시판</a>
                     </div>
                 </li>
             </ul>
         </nav>
+        <hr>
         <!-- 브레드크럼 네비게이션 -->
+        <div class="nav-background"></div>
+        <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
-                <li class="breadcrumb-item active" aria-current="page">건강정보</li>
-
+                 <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li> -->
+                <li class="breadcrumb-item active" aria-current="page">건강관리</li> 
             </ol>
         </nav>
         <div class="user-options">
@@ -64,38 +67,44 @@
         </div>
     </header>
 
-    <main>
-        <section class="custom-info">
-            <div class="info-container">
-                <div class="info-box small">
-                    <div class="info-image"></div>
-                    <div class="info-text">제품 정보</div>
+    <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
+    <div class="wrapper">
+        <main>
+            <section class="custom-info">
+                <div class="info-container">
+                    <div class="info-box small">
+                        <div class="info-image"></div>
+                        <div class="info-text">제품 정보</div>
+                    </div>
+                    <div class="info-box large">
+                        <div class="info-image"></div>
+                        <div class="info-text">제품 정보</div>
+                    </div>
+                    <div class="info-box small">
+                        <div class="info-image"></div>
+                        <div class="info-text">제품 정보</div>
+                    </div>
+                    <div class="info-box small">
+                        <div class="info-image"></div>
+                        <div class="info-text">제품 정보</div>
+                    </div>
+                    <div class="info-box small">
+                        <div class="info-image"></div>
+                        <div class="info-text">제품 정보</div>
+                    </div>
                 </div>
-                <div class="info-box large">
-                    <div class="info-image"></div>
-                    <div class="info-text">제품 정보</div>
-                </div>
-                <div class="info-box small">
-                    <div class="info-image"></div>
-                    <div class="info-text">제품 정보</div>
-                </div>
-                <div class="info-box small">
-                    <div class="info-image"></div>
-                    <div class="info-text">제품 정보</div>
-                </div>
-                <div class="info-box small">
-                    <div class="info-image"></div>
-                    <div class="info-text">제품 정보</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 배너: 전체 너비로 설정 -->
-        <!-- <section class="banner">
-            <img src="../img/Base_banner.png" alt="Be Petmily Banner">
-        </section> -->
-    </main>
-
+            </section>
+    
+            <!-- 배너: 전체 너비로 설정 -->
+            <!-- <section class="banner">
+                <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+            </section> -->
+        </main>
+    </div>
+    <!-- 배너: 전체 너비로 설정 -->
+    <section class="banner">
+        <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+    </section>
     <footer class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-top-bar">
@@ -110,7 +119,6 @@
                         <li><a href="item_list.html">사료</a></li>
                         <li><a href="#">간식</a></li>
                         <li><a href="#">용품</a></li>
-
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -133,7 +141,7 @@
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="#">자유 게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
                     </ul>   
                 </div>
             </div>
@@ -155,13 +163,27 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var backToTopButton = document.getElementById('back-to-top');
-            backToTopButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                window.scrollTo({top: 0, behavior: 'smooth'});
-            });
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity < 1) {
+                newQuantity = 1;
+            }
+            quantityInput.value = newQuantity;
+            updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+            var quantity = document.getElementById('quantity').value;
+            var price = 39200;
+            var totalPrice = price * quantity;
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString() + '원';
+        }
+
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
 </body>
-</html>

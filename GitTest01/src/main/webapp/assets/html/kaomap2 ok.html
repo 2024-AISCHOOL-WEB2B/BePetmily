@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사용자 위치 기반 서비스</title>
-    
+    <link rel="stylesheet" href="../css/Base_style.css">
     <link rel="stylesheet" href="../css/map3.css">
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d65efe482352843c1373a29f486cdb0f"></script>
 </head>
@@ -14,50 +14,53 @@
         <div class="logo">
             <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
-        <hr>
-        <nav>
+        
+        <!-- 주 네비게이션 -->
+        <nav class="main-nav">
             <ul>
-                <li class="dropdown">
+                <!-- 개별 드롭다운 메뉴 설정 -->
+                <li class="dropdown products-tab">
                     <a>제품</a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content products-content">
                         <a href="item_list.html">사료</a>
                         <a href="#">간식</a>
                         <a href="#">용품</a>
-                        <a href="#">장난감</a>
-                        <a href="#">위생용품</a>    
-                        <a href="#">산책용품</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a >시설</a>
-                    <div class="dropdown-content">
+                <li class="dropdown facilities-tab">
+                    <a>시설</a>
+                    <div class="dropdown-content facilities-content">
                         <a href="#">병원</a>
                         <a href="#">숙박</a>
-                        <a href="#">카페</a>
+                        <a href="#">카페/식당</a>
+                        <a href="#">기타시설</a>
                         <a href="kaomap2 ok.html">주변위치</a>
                     </div>
                 </li>
-                <li class="dropdown health-tab"> <!-- 여기서 클래스 추가 -->
+                <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
-                    <div class="dropdown-content">
+                    <div class="dropdown-content health-content">
                         <a href="HealthCare.html" class="moveable">건강관리</a>
                         <a href="#" class="moveable">질병예측</a>
                     </div>
                 </li>
-                <li class="dropdown">
-                    <a >커뮤니티</a>
-                    <div class="dropdown-content">
-                        <!-- <a href="#">자주묻는 질문</a> -->
-                        <a href="#">앨범게시판</a>
+                <li class="dropdown community-tab">
+                    <a>커뮤니티</a>
+                    <div class="dropdown-content community-content">
+                        <a href="#">자유게시판</a>
                     </div>
                 </li>
             </ul>
         </nav>
+        <hr>
         <!-- 브레드크럼 네비게이션 -->
+        <div class="nav-background"></div>
+        <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
-                <li class="breadcrumb-item active" aria-current="page">주변 위치</li>
+                <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li> -->
+                <li class="breadcrumb-item active" aria-current="page">주변위치</li> 
             </ol>
         </nav>
         <div class="user-options">
@@ -80,16 +83,16 @@
             </section>
     </div>
         </main>
-        <!-- 배너: 전체 너비로 설정 -->
-        <section class="banner">
-            <img src="../img/Base_banner.png" alt="Be Petmily Banner">
-        </section>
-
+    </div>
+    <!-- 배너: 전체 너비로 설정 -->
+    <section class="banner">
+        <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+    </section>
     <footer class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-top-bar">
                 <span class="footer-lang">🌐 대한민국/한국어 </span>
-                <span class="footer-top"><a href="#" id="back-to-top1"><img src="/09.project1/project1-1/image/맨 위 (2).png" alt="맨 위" srcset=""></a></span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="맨 위" srcset=""></a></span>
             </div>
             <hr> 
             <div class="footer-top">
@@ -99,7 +102,6 @@
                         <li><a href="item_list.html">사료</a></li>
                         <li><a href="#">간식</a></li>
                         <li><a href="#">용품</a></li>
-
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -122,7 +124,7 @@
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="#">자유 게시판</a></li>
+                        <li><a href="#">자유게시판</a></li>
                     </ul>   
                 </div>
             </div>
@@ -138,12 +140,12 @@
                 <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
             </div>
             <div class="back-to-top">
-                <a href="#" id="back-to-top"><img src="/09.project1/project1-1/image/up1.png" alt="맨 위로"></a>
+                <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="맨 위로"></a>
             </div>
         </div>
     </footer>
 
-<!-- 카카오 맵 및 위치 정보 스크립트 -->
+   <!-- 카카오 맵 및 위치 정보 스크립트 -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // 지도 표시할 컨테이너와 옵션 설정
@@ -259,7 +261,4 @@
         }
     });
 </script>
-
-
 </body>
-</html>
