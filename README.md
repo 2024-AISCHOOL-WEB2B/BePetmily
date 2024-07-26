@@ -30,7 +30,7 @@
   </div>
 
 ## Contributors
-All participants in this project are majoring in Computer Science Engieneering, Dongguk University🏫
+All participants in this project 🖥🖱
 | Name             | Email                 | Github                           | Role      |
 |------------------|-----------------------|----------------------------------|-----------|
 | 🧒🏻Jae Hun Choi  | email    |https://github.com/czarmagnate                  | Back-end |
