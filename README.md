@@ -1,6 +1,6 @@
 
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=ece700&height=200&text=BePetMily!&animation=fadeIn&fontSize=80&fontAlignY=35"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=f7f5f5&height=200&text=BePetMily!&animation=fadeIn&fontSize=80&fontAlignY=35"/>
 
 <div align="center">
 # 🐾Be PetMily🐾
