@@ -31,13 +31,13 @@
                         <a href="#">숙박</a>
                         <a href="#">카페/식당</a>
                         <a href="#">기타시설</a>
-                        <a href="kaomap2 ok.html">주변위치</a>
+                        <a href="map.html">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
-                        <a href="HealthCare.html" class="moveable">건강관리</a>
+                        <!-- <a href="HealthCare.html" class="moveable">건강관리</a> -->
                         <a href="#" class="moveable">질병예측</a>
                     </div>
                 </li>
@@ -101,13 +101,13 @@
                         <li><a href="#">병원</a></li>
                         <li><a href="#">숙박</a></li>
                         <li><a href="#">카페</a></li>
-                        <li><a href="kaomap2 ok.html">주변위치</a></li>
+                        <li><a href="map.html">주변위치</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>맞춤형 정보</h3>
                     <ul>
-                        <li><a href="HealthCare.html">건강관리</a></li>
+                        <!-- <li><a href="HealthCare.html">건강관리</a></li> -->
                         <li><a href="#">질병예측</a></li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>
@@ -137,23 +137,7 @@
     </footer>
 
     <script>
-        function changeQuantity(amount) {
-            var quantityInput = document.getElementById('quantity');
-            var currentQuantity = parseInt(quantityInput.value);
-            var newQuantity = currentQuantity + amount;
-            if (newQuantity < 1) {
-                newQuantity = 1;
-            }
-            quantityInput.value = newQuantity;
-            updateTotalPrice();
-        }
-
-        function updateTotalPrice() {
-            var quantity = document.getElementById('quantity').value;
-            var price = 39200;
-            var totalPrice = price * quantity;
-            document.getElementById('total-price').innerText = totalPrice.toLocaleString() + '원';
-        }
+        
 
         document.getElementById('back-to-top').addEventListener('click', function(e) {
             e.preventDefault();

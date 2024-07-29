@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>제품 상세 페이지</title>
-    <link rel="stylesheet" href="../css/Base_style.css">
-    <link rel="stylesheet" href="../css/post2.css">
+    <title>질병 예측</title>
+    <link rel="stylesheet" href="assets/css/Base_style.css">
+    <link rel="stylesheet" href="assets/css/DiseasePrediction.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
+            <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
-        
-        <!-- 주 네비게이션 -->
-        <nav class="main-nav">
+        <hr>
+        <nav>
             <ul>
-                <!-- 개별 드롭다운 메뉴 설정 -->
                 <li class="dropdown products-tab">
                     <a>제품</a>
                     <div class="dropdown-content products-content">
@@ -30,16 +30,15 @@
                     <div class="dropdown-content facilities-content">
                         <a href="#">병원</a>
                         <a href="#">숙박</a>
-                        <a href="#">카페/식당</a>
-                        <a href="#">기타시설</a>
-                        <a href="map.html">주변위치</a>
+                        <a href="#">카페</a>
+                        <a href="kaomap2 ok.html">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
-                        <!-- <a href="HealthCare.html" class="moveable">건강관리</a> -->
-                        <a href="#" class="moveable">질병예측</a>
+                        <a href="HealthCare.html" class="moveable">건강관리</a>
+                        <a href="DiseasePrediction.jsp" class="moveable">질병예측</a>
                     </div>
                 </li>
                 <li class="dropdown community-tab">
@@ -62,55 +61,56 @@
             </ol>
         </nav>
         <div class="user-options">
-            <a href="#"><img src="../img/Base_user.png" alt="User Icon"></a>
-            <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
+            <a href="#"><img src="assets/img/Base_user.png" alt="User Icon"></a>
+            <a href="#"><img src="assets/img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
 
-    </header>
-
-    <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
-        <main>
-        <div class="container1">
-            <form>
-                <div class="container">
-                    <h1>글쓰기</h1>
-                    <form action="uploadServlet" method="post" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="title">제목</label>
-                            <input type="text" id="title" name="title" required>
+        <main class="main-container">
+            <div class="left-content">
+                <%@ include file="modelTest2.jsp" %>
+            </div>
+            <div class="right-content">
+                <section class="custom-info">
+                    <div class="info-container">
+                        <div class="info-box small">
+                            <div class="info-text"><h1>질병 이름</h1></div>
+                            <p>슬개골 탈구</p>
                         </div>
-                        <div class="form-group">
-                            <label for="content">내용</label>
-                            <textarea id="content" name="content" style="width: 400px; height: 190px;" rows="5" required></textarea>
+                        <div class="info-box large">
+                        <h2>질병케어 방법</h2>
+                            <p>강아지의 무릎에는 동그랗고 작은 뼈인 슬개골이 있다.
+                            본래 슬개골은 깊게 파인 활차구 홈 안에 들어가서 무릎 관절이 움직이도록 도와주는 역할을 하지만,
+                            슬개골이 본래의 위치에서 벗어날 수 있다. 
+                            이러한 상태를 강아지 슬개골 탈구라고 부른다. </p>
                         </div>
-                        <div class="form-group">
-                            <label for="file">사진 업로드</label>
-                            <input type="file" id="file" name="file" accept="image/*" required>
+                        
+                        
+                     <!--   <div class="info-box small">
+                            <div class="info-image"></div>
+                            <div class="info-text">제품 정보</div>
                         </div>
-                        <div class="form-group">
-                            <button type="submit">작성하기</button>
+                        <div class="info-box small">
+                            <div class="info-image"></div>
+                            <div class="info-text">제품 정보</div>
                         </div>
-                    </form>
-                </div>
-                
-            </form>    
-       </div>
-
-
-
+                        <div class="info-box small">
+                            <div class="info-image"></div>
+                            <div class="info-text">제품 정보</div>
+                         --> 
+                         
+                        </div>   
+                    </div>
+                </section>
+            </div>
         </main>
     </div>
-    <!-- 배너: 전체 너비로 설정 -->
-    <section class="banner">
-        <img src="../img/Base_banner.png" alt="Be Petmily Banner">
-    </section>
     <footer class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-top-bar">
                 <span class="footer-lang">🌐 대한민국/한국어 </span>
-                <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="맨 위" srcset=""></a></span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="assets/img/Base_up01.png" alt="맨 위" srcset=""></a></span>
             </div>
             <hr> 
             <div class="footer-top">
@@ -128,21 +128,20 @@
                         <li><a href="#">병원</a></li>
                         <li><a href="#">숙박</a></li>
                         <li><a href="#">카페</a></li>
-                        <li><a href="map.html">주변위치</a></li>
+                        <li><a href="kaomap2 ok.html">주변위치</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>맞춤형 정보</h3>
                     <ul>
-                        <!-- <li><a href="HealthCare.html">건강관리</a></li> -->
-                        <li><a href="#">질병예측</a></li>
+                        <li><a href="HealthCare.html">건강관리</a></li>
+                        <li><a href="DiseasePrediction.jsp">질병예측</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
-                        <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="#">앨범게시판</a></li>
+                        <li><a href="#">자유 게시판</a></li>
                     </ul>   
                 </div>
             </div>
@@ -158,17 +157,9 @@
                 <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
             </div>
             <div class="back-to-top">
-                <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="맨 위로"></a>
+                <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="맨 위로"></a>
             </div>
         </div>
     </footer>
-
-    <script>
-        
-
-        document.getElementById('back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        });
-    </script>
 </body>
+</html>

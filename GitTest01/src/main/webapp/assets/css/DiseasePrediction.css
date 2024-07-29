@@ -1,0 +1,106 @@
+
+/* 전체 공간설정, 동적  */
+.wrapper {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* 메인 컨테이너 */
+.main-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 200px); /* 헤더와 푸터를 제외한 높이 */
+}
+
+/* 왼쪽 컨텐츠 (JSP 파일) */
+.left-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+}
+
+/* 오른쪽 컨텐츠 (HealthCare.html) */
+.right-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  
+}
+
+/*네비게이션 */
+nav {
+    margin: 5px;
+    display: flex;
+    width: 70%;
+}
+
+nav ul li.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 60px;
+}
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.info-box.small {
+    grid-column: span 2;
+}
+
+.info-box.large {
+    grid-column: span 2;
+}
+
+/* HealthCare.html을 포함하는 iframe 스타일 */
+.healthcare-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+.info-box small .info-text h1{
+	font-size: 21px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 0;
+    border-bottom: 1px solid #ddd;
+    max-height: 252px;
+}
