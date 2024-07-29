@@ -8,17 +8,27 @@ public class ProductDTO {
 	private String productCate;
 	private int stock;
 	private String productUrl;	
+	private String imagePath;
 	
 	public ProductDTO(int productId, String productName, String productPrice, String productCate, int stock,
-			String productUrl) {
+			String productUrl, String imagePath) {
 		this.productId = productId;
 		this.productName = productName;
 		this.productPrice = productPrice;
 		this.productCate = productCate;
 		this.stock = stock;
 		this.productUrl = productUrl;
-		
+		this.imagePath = imagePath;
 	}
+	
+	public String getImagepath() {
+		return imagePath;
+	}
+
+	public void setProductImage(String imagePath) {
+		this.imagePath = imagePath;
+	}
+
 	public int getProductId() {
 		return productId;
 	}

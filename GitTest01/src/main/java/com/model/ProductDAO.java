@@ -48,20 +48,21 @@ public class ProductDAO {
 		}
 	}
 
-	public ArrayList<ProductDTO> getProductList(int curPage) {
+	public ArrayList<ProductDTO> getProductList(int curPage, String cate) {
 
 		ArrayList<ProductDTO> products = new ArrayList<>();
 
 		getConnection();
 
 		try {
-			String sql = "SELECT * FROM PRODUCT WHERE ROWNUM>=? AND ROWNUM <=?";
-			
+			String sql = "SELECT * FROM (SELECT P.*, I.IMAGE_PATH, ROWNUM AS rnum FROM PRODUCT P LEFT JOIN IMAGE I ON P.PRODUCT_ID = I.PRODUCT_ID WHERE P.PRODUCT_CATEGORY = ? ORDER BY P.PRODUCT_ID) WHERE rnum BETWEEN ? AND ?";
+
 			psmt = conn.prepareStatement(sql);
-			
-			psmt.setInt(1, (curPage - 1) * 15 + 1);
-			psmt.setInt(2, curPage * 15);
-			
+
+			psmt.setString(1, cate);
+			psmt.setInt(2, (curPage - 1) * 15 + 1);
+			psmt.setInt(3, curPage * 15);
+
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
@@ -70,8 +71,9 @@ public class ProductDAO {
 				String productPrice = rs.getString("PRODUCT_PRICE");
 				String productCate = rs.getString("PRODUCT_CATEGORY");
 				int stock = rs.getInt("STOCK");
-				String productUrl = rs.getString("PRODUCT_URL");
-				ProductDTO dto = new ProductDTO(productId, productName, productPrice, productCate, stock, productUrl);
+				String productUrl = rs.getString("PRODUCT_URL");	
+				String imagePath = rs.getString("IMAGE_PATH");
+				ProductDTO dto = new ProductDTO(productId, productName, productPrice, productCate, stock, productUrl, imagePath);
 				products.add(dto);
 			}
 
@@ -82,6 +84,33 @@ public class ProductDAO {
 		}
 
 		return products;
+	}
+
+	public int getTotal(String cate) {
+		int totalCnt = 0;
+
+		getConnection();
+
+		try {
+			String sql = "SELECT COUNT(*) AS CNT FROM PRODUCT WHERE PRODUCT_CATEGORY = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, cate);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				totalCnt = rs.getInt("CNT");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+
+		return totalCnt;
 	}
 
 }

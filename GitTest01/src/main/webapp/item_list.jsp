@@ -1,3 +1,4 @@
+<%@page import="com.model.PageDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.ProductDAO"%>
 <%@page import="com.model.ProductDTO"%>
@@ -21,9 +22,9 @@
             <ul>
                 <li class="dropdown products-tab"><a>제품</a>
                     <div class="dropdown-content products-content">
-                        <a href="item_list.jsp?page=1">사료</a>
-                        <a href="#">간식</a>
-                        <a href="#">용품</a>
+                        <a href="item_list.jsp?cate=food&page=1">사료</a>
+                        <a href="item_list.jsp?cate=snack&page=1">간식</a>
+                        <a href="item_list.jsp?cate=etc&page=1">용품</a>
                     </div>
                 </li>
                 <li class="dropdown facilities-tab"><a>시설</a>
@@ -68,23 +69,25 @@
         <main>
             <div class="container">
                 <div class="product-grid">
-                    <%
-                        String curPageParam = request.getParameter("page");
-                        int curPage = 1; // 기본값
-                        if (curPageParam != null) {
-                            try {
-                                curPage = Integer.parseInt(curPageParam);
-                            } catch (NumberFormatException e) {
-                                curPage = 1; // 잘못된 값이 들어오면 기본값 사용
-                            }
-                        }
-                        ProductDAO dao = new ProductDAO();
-                        ArrayList<ProductDTO> products = dao.getProductList(curPage);
-                    %>
+				<%
+				    String cate = request.getParameter("cate");
+				    String pageS = request.getParameter("page");
+				    int curPage = (pageS != null) ? Integer.parseInt(pageS) : 1;
+					
+				    ProductDAO dao = new ProductDAO();
+				    ArrayList<ProductDTO> products = (ArrayList<ProductDTO>) request.getAttribute("products");
+				    PageDTO pages = (PageDTO) request.getAttribute("pages");					
+				    if (products == null) {
+				        products = dao.getProductList(curPage,cate); // 현재 페이지에 해당하는 제품 목록을 가져옵니다.
+				    }
+				    if (pages == null) {
+				        pages = new PageDTO(curPage, 15, dao.getTotal(cate)); // 현재 페이지를 기준으로 PageDTO를 생성합니다.
+				    }
+				%>
                     <!-- 제품 목록 출력 -->
                     <% for (ProductDTO product : products) { %>
                         <div class="product-detail">
-                            <a href="#"><img src="<%= product.getProductUrl() %>" alt="제품 이미지"></a>
+                            <a href="<%= product.getProductUrl() %>"><img src="<%= product.getImagepath() %>" alt="제품 이미지"></a>
                             <h1><%= product.getProductName() %></h1>
                             <p>가격: <%= product.getProductPrice() %></p>
                             <form action="buy.html" method="get">
@@ -95,11 +98,12 @@
                 </div>
             </div>
             <div class="pagination">
-                <a href="item_list.jsp?page=<%= curPage - 1 %>" class="prev-page">&laquo;</a>
-                <% for (int i = 1; i <= 5; i++) { %>
-                    <a href="item_list.jsp?page=<%= i %>" class="page-number"><%= i %></a>
+                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() - 1 %>" class="prev-page">&laquo;</a>
+                <% for (int i = pages.getStartPage(); i <= pages.getEndPage(); i++) { %>
+                	<a href="item_list.jsp?cate=<%=cate%>&page=<%= i %>" class="page-number"><%= i %></a>
                 <% } %>
-                <a href="item_list.jsp?page=<%= curPage + 1 %>" class="next-page">&raquo;</a>
+                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() + 1 %>" class="next-page">&raquo;</a>
+                
             </div>
         </main>
         <!-- 배너: 전체 너비로 설정 -->
