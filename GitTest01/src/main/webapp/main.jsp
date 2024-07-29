@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인페이지</title>
-    <link rel="stylesheet" href="../css/Base_style.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="assets/css/Base_style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
+            <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
         
         <!-- 주 네비게이션 -->
@@ -60,8 +60,8 @@
             </ol>
         </nav>
         <div class="user-options">
-            <a href="#"><img src="../img/Base_user.png" alt="User Icon"></a>
-            <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
+            <a href="#"><img src="assets/img/Base_user.png" alt="User Icon"></a>
+            <a href="#"><img src="assets/img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
 
@@ -70,7 +70,7 @@
         <main>
             <div class="top-content">
                 <div class="left-section">
-                    <img src="../img/main_banner.jpg" alt="Sample Image">
+                    <img src="assets/img/main_banner.jpg" alt="Sample Image">
                 </div>
                 <div class="right-section">
                     <div class="banner-text">
@@ -92,7 +92,7 @@
                 <div class="product-list">
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back10.jpg" alt="Product 1"></a>
+                            <a href="#"><img src="assets/img/album_back10.jpg" alt="Product 1"></a>
                         </button>
                         <div>
                             <p>ANF 6Free 연어와 병아리콩 6.5kg</p>
@@ -104,21 +104,21 @@
                     <!--  더미  -->
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back9.jpg" alt="Product 2"></a>
+                            <a href="#"><img src="assets/img/album_back9.jpg" alt="Product 2"></a>
                         </button>
                         <p>도쿄펫 아이스 크림 120ml 3개</p>
                         <p class="price">18,000원</p>
                     </div>
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back8.jpg" alt="Product 3"></a>
+                            <a href="#"><img src="assets/img/album_back8.jpg" alt="Product 3"></a>
                         </button>
                         <p>망고왕 수영장</p>
                         <p class="price">9,500원</p>
                     </div>
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back7.jpg" alt="Product 4"></a>
+                            <a href="#"><img src="assets/img/album_back7.jpg" alt="Product 4"></a>
                         </button>
                         <p>요셉의 프로젝트 매트</p>
                         <p class="price">34,000원</p>
@@ -131,7 +131,7 @@
                 <div class="product-list">
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back6.jpg" alt="Product 5"></a>
+                            <a href="#"><img src="assets/img/album_back6.jpg" alt="Product 5"></a>
                         </button>
                         <p>두잇 버그 리페</p>
                         <p class="price">22,900원</p>
@@ -139,21 +139,21 @@
                     <!--  더미  -->
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back5.jpg" alt="Product 6"></a>
+                            <a href="#"><img src="assets/img/album_back5.jpg" alt="Product 6"></a>
                         </button>
                         <p>팬티온 소프트 팬티</p>
                         <p class="price">13,000원</p>
                     </div>
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back4.jpg" alt="Product 7"></a>
+                            <a href="#"><img src="assets/img/album_back4.jpg" alt="Product 7"></a>
                         </button>
                         <p>펫프랜드 셔츠</p>
                         <p class="price">29,900원</p>
                     </div>
                     <div class="product-item">
                         <button type="button">
-                            <a href="#"><img src="../img/album_back13.jpg" alt="Product 8"></a>
+                            <a href="#"><img src="assets/img/album_back13.jpg" alt="Product 8"></a>
                         </button>
                         <p>박스앤홀 목줄</p>
                         <p class="price">22,000원</p>
@@ -164,13 +164,13 @@
     </div>
     <!-- 배너: 전체 너비로 설정 -->
     <section class="banner">
-        <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+        <img src="assets/img/Base_banner.png" alt="Be Petmily Banner">
     </section>
     <footer class="footer-wrapper">
         <div class="footer-container">
             <div class="footer-top-bar">
                 <span class="footer-lang">🌐 대한민국/한국어 </span>
-                <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="맨 위" srcset=""></a></span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="assets/img/Base_up01.png" alt="맨 위" srcset=""></a></span>
             </div>
             <hr> 
             <div class="footer-top">
@@ -217,7 +217,7 @@
                 <p>©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
             </div>
             <div class="back-to-top">
-                <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="맨 위로"></a>
+                <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="맨 위로"></a>
             </div>
         </div>
     </footer>
