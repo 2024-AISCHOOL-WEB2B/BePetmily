@@ -38,13 +38,12 @@
                 </li>
                 <li class="dropdown health-tab"><a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
-                        <a href="HealthCare.html" class="moveable">건강관리</a>
                         <a href="#" class="moveable">질병예측</a>
                     </div>
                 </li>
                 <li class="dropdown community-tab"><a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="#">자유게시판</a>
+                        <a href="#">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -90,8 +89,10 @@
                             <a href="<%= product.getProductUrl() %>"><img src="<%= product.getImagepath() %>" alt="제품 이미지"></a>
                             <h1><%= product.getProductName() %></h1>
                             <p>가격: <%= product.getProductPrice() %></p>
-                            <form action="buy.html" method="get">
-                                <button type="submit">구매하기</button>
+                           <form action="buy.html" method="get">
+                                <a href="<%= product.getProductUrl() %>">
+                                    <button type="button">구매하기</button>
+                                </a>
                             </form>
                         </div>
                     <% } %>
@@ -105,7 +106,8 @@
                 <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() + 1 %>" class="next-page">&raquo;</a>
                 
             </div>
-        </main>
+        	</main>
+        </div>
         <!-- 배너: 전체 너비로 설정 -->
         <section class="banner">
             <img src="assets/img/Base_banner.png" alt="Be Petmily Banner">
@@ -131,20 +133,51 @@
                         <ul>
                             <li><a href="#">병원</a></li>
                             <li><a href="#">숙박</a></li>
-                            <li><a href="#">카페</a></li>
+                            <li><a href="#">카페/식당</a></li>
+                            <li><a href="#">기타시설</a></li>
                             <li><a href="kaomap2 ok.html">주변위치</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
                         <h3>맞춤형 정보</h3>
                         <ul>
-                            <li><a href="HealthCare.html">건강관리</a></li>
                             <li><a href="#">질병예측</a></li>
                         </ul>
                     </div>
+                    <div class="footer-links">
+                    <h3>커뮤니티</h3>
+                    <ul>
+                        <!-- <li><a href="#">자주 묻는 질문</a></li> -->
+                        <li><a href="#">앨범게시판</a></li>
+                    </ul>   
+                	</div>
                 </div>
-            </div>
-        </footer>
-    </div>
+	            <hr>
+	            <div class="footer-contact">
+	                <p>Be Petmily와 상담하세요</p>
+	                <p>평일 09:00 ~ 18:00 주말/공휴일 휴무</p>
+	                <p>070-123-4567</p>
+	                <a href="mailto:info@bepetmily.com">문의하기</a>
+	            </div>
+	            <div class="footer-bottom">
+	                <p>개인정보 보호센터 | 법률정보 | 개인정보 처리방침</p>
+	                <p>2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
+	            </div>
+	            <div class="back-to-top">
+	                <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="맨 위로"></a>
+	            </div>
+	        </div>
+	    </footer>
+		<script>
+		        
+		
+		        document.getElementById('back-to-top').addEventListener('click', function(e) {
+		            e.preventDefault();
+		            window.scrollTo({top: 0, behavior: 'smooth'});
+		        });
+		</script>
+	    
+    
+    
 </body>
 </html>
