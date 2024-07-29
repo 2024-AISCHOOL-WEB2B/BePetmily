@@ -1,0 +1,57 @@
+@charset "EUC-KR";
+
+.login-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    border: 2px solid rgb(167, 166, 166);
+    border-radius: 3%;
+    align-items: center;
+    max-width: 500px;
+}
+
+.input-field {   /*로그인 아이디 비밀번호 입력 */
+    width: 97%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex; 
+  
+
+}
+.login-button {
+    width: 100%;;
+    padding: 10px;
+    background-color: #f8b400;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.login-button:hover {
+    background-color: #e0a200;
+}
+.link-container {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.link-container a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #606060;
+    font-size: 16px;
+}
+.link-container a:hover {
+    text-decoration: underline;
+}
+.login-container span {  /*span태그안 BE PETMILY 글자 색*/
+    color: #f4a900;
+}
+
+
+

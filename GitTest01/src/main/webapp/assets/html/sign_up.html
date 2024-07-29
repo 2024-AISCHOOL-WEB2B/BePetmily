@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인페이지</title>
+    <title>회원가입</title>
     <link rel="stylesheet" href="../css/Base_style.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sign_up.css">
 </head>
 <body>
     <header>
@@ -38,6 +38,7 @@
                 <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
+                        <!-- <a href="HealthCare.html" class="moveable">건강관리</a> -->
                         <a href="#" class="moveable">질병예측</a>
                     </div>
                 </li>
@@ -56,6 +57,8 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
+                <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>
+                <li class="breadcrumb-item active" aria-current="page">사료</li> -->
             </ol>
         </nav>
         <div class="user-options">
@@ -67,98 +70,50 @@
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
         <main>
-            <div class="top-content">
-                <div class="left-section">
-                    <img src="../img/main_banner.jpg" alt="Sample Image">
-                </div>
-                <div class="right-section">
-                    <div class="banner-text">
-                        <h2 class=""><span class="BP">BE PETMILY</span>를  <hr>안전하고 편리하게 이용하세요</h2>
-                        <button><a href="login.html">BE PETMILY 로그인</a></button>
-                        <div class="login">
-                            <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a> | <a href="sign_up.html">회원가입</a>
+            <div class="login-section">
+                <h1>회원가입</h1>
+                <p><span>BE PETMILY</span>에 가입하여 더 많은 혜택을 즐겨보세요!   </p>
+                <form>
+                    <div class="input-box-group">
+                        <div class="input-box">
+                            <i class="user-icon">&#128054;</i>
+                            <input type="text" id="username" name="username" placeholder="아이디">
+                            <button type="button" class="check-button">중복체크</button>
+                        </div>
+                        <div class="input-box">
+                            <i class="lock-icon">🔒</i>
+                            <input type="password" id="password" name="password" placeholder="비밀번호">
                         </div>
                     </div>
-                    <hr>
-                    <div class="banner-text-bottom">
-                        <button class="register-button">동물 등록번호 등록하기</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">  <!--상품 알려주는 코드 -->
-                <h2>이 상품은 어때요?</h2>
-                <div class="product-list">
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back10.jpg" alt="Product 1"></a>
-                        </button>
-                        <div>
-                            <p>ANF 6Free 연어와 병아리콩 6.5kg</p>
-                            <p class="price">47,400원</p>
+                    <div class="input-box-group">
+                        <div class="input-box">
+                            <i class="user-icon">👤</i>
+                            <input type="text" id="name" name="name" placeholder="이름">
+                        </div>
+                        <div class="input-box">
+                            <i class="email-icon">📧</i>
+                            <input type="email" id="email" name="email" placeholder="이메일">
+                        </div>
+                        <div class="input-box">
+                            <i class="telecom-icon">📞</i>
+                            <select id="telecom" name="telecom">
+                                <option value="" disabled selected>통신사 선택</option>
+                                <option value="kt">KT</option>
+                                <option value="lg">LG</option>
+                                <option value="skt">SKT</option>
+                            </select>
+                        </div>
+                        <div class="input-box">
+                            <i class="phone-icon">📱</i>
+                            <input type="tel" id="phone" name="phone" placeholder="휴대전화번호">
                         </div>
                     </div>
-
-
-                    <!--  더미  -->
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back9.jpg" alt="Product 2"></a>
-                        </button>
-                        <p>도쿄펫 아이스 크림 120ml 3개</p>
-                        <p class="price">18,000원</p>
-                    </div>
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back8.jpg" alt="Product 3"></a>
-                        </button>
-                        <p>망고왕 수영장</p>
-                        <p class="price">9,500원</p>
-                    </div>
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back7.jpg" alt="Product 4"></a>
-                        </button>
-                        <p>요셉의 프로젝트 매트</p>
-                        <p class="price">34,000원</p>
-                    </div>
-                </div>
+                    <button type="submit" class="register-button">BE PETMILY 회원가입</button>
+                </form>
             </div>
 
-            <div class="section">
-                <h2>안전한 산책, 귀여움 한스푼!</h2>
-                <div class="product-list">
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back6.jpg" alt="Product 5"></a>
-                        </button>
-                        <p>두잇 버그 리페</p>
-                        <p class="price">22,900원</p>
-                    </div>
-                    <!--  더미  -->
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back5.jpg" alt="Product 6"></a>
-                        </button>
-                        <p>팬티온 소프트 팬티</p>
-                        <p class="price">13,000원</p>
-                    </div>
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back4.jpg" alt="Product 7"></a>
-                        </button>
-                        <p>펫프랜드 셔츠</p>
-                        <p class="price">29,900원</p>
-                    </div>
-                    <div class="product-item">
-                        <button type="button">
-                            <a href="#"><img src="../img/album_back13.jpg" alt="Product 8"></a>
-                        </button>
-                        <p>박스앤홀 목줄</p>
-                        <p class="price">22,000원</p>
-                    </div>
-                </div>
-            </div>
+
+
         </main>
     </div>
     <!-- 배너: 전체 너비로 설정 -->
@@ -186,20 +141,21 @@
                     <ul>
                         <li><a href="#">병원</a></li>
                         <li><a href="#">숙박</a></li>
-                        <li><a href="#">카페/식당</a></li>
-                        <li><a href="#">주변시설</a></li>
+                        <li><a href="#">카페</a></li>
                         <li><a href="map.html">주변위치</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>맞춤형 정보</h3>
                     <ul>
+                        <!-- <li><a href="HealthCare.html">건강관리</a></li> -->
                         <li><a href="#">질병예측</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
+                        <!-- <li><a href="#">자주 묻는 질문</a></li> -->
                         <li><a href="#">앨범게시판</a></li>
                     </ul>   
                 </div>
@@ -222,11 +178,27 @@
     </footer>
 
     <script>
+        function changeQuantity(amount) {
+            var quantityInput = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + amount;
+            if (newQuantity < 1) {
+                newQuantity = 1;
+            }
+            quantityInput.value = newQuantity;
+            updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+            var quantity = document.getElementById('quantity').value;
+            var price = 39200;
+            var totalPrice = price * quantity;
+            document.getElementById('total-price').innerText = totalPrice.toLocaleString() + '원';
+        }
+
         document.getElementById('back-to-top').addEventListener('click', function(e) {
             e.preventDefault();
             window.scrollTo({top: 0, behavior: 'smooth'});
         });
     </script>
 </body>
-</html>
-
