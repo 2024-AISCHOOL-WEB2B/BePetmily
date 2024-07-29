@@ -14,13 +14,12 @@
         <div class="logo">
             <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
-        <hr>
         <nav>
             <ul>
                 <li class="dropdown products-tab">
                     <a>제품</a>
                     <div class="dropdown-content products-content">
-                        <a href="item_list.html">사료</a>
+                        <a href="assets/html/item_list.html">사료</a>
                         <a href="#">간식</a>
                         <a href="#">용품</a>
                     </div>
@@ -30,21 +29,21 @@
                     <div class="dropdown-content facilities-content">
                         <a href="#">병원</a>
                         <a href="#">숙박</a>
-                        <a href="#">카페</a>
-                        <a href="kaomap2 ok.html">주변위치</a>
+                        <a href="#">카페/식당</a>
+                        <a href="#">기타시설</a>
+                        <a href="assets/html/map.html">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab">
                     <a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
-                        <a href="HealthCare.html" class="moveable">건강관리</a>
                         <a href="DiseasePrediction.jsp" class="moveable">질병예측</a>
                     </div>
                 </li>
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="#">앨범게시판</a>
+                        <a href="assets/html/album_list.html">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -55,7 +54,7 @@
         <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="assets/html/main.html">홈</a><span>&gt;</span></li>
                 <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>
                 <li class="breadcrumb-item active" aria-current="page">사료</li> -->
             </ol>
@@ -117,7 +116,7 @@
                 <div class="footer-links">
                     <h3>제품</h3>
                     <ul>
-                        <li><a href="item_list.html">사료</a></li>
+                        <li><a href="assets/html/item_list.html">사료</a></li>
                         <li><a href="#">간식</a></li>
                         <li><a href="#">용품</a></li>
                     </ul>
@@ -127,21 +126,21 @@
                     <ul>
                         <li><a href="#">병원</a></li>
                         <li><a href="#">숙박</a></li>
-                        <li><a href="#">카페</a></li>
-                        <li><a href="kaomap2 ok.html">주변위치</a></li>
+                        <li><a href="#">카페/식당</a></li>
+                        <li><a href="#">기타시설</a></li>
+                        <li><a href="assets/html/map.html">주변위치</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>맞춤형 정보</h3>
                     <ul>
-                        <li><a href="HealthCare.html">건강관리</a></li>
                         <li><a href="DiseasePrediction.jsp">질병예측</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
-                        <li><a href="#">자유 게시판</a></li>
+                        <li><a href="assets/html/album_list.html">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>
