@@ -1,263 +1,233 @@
-<%@page import="com.model.userDTO"%>
-<%@page import="java.util.ArrayList"%>
-
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>  
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Forty by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
-		
-		<%
-			userDTO info = (userDTO)session.getAttribute("info");
-		%>
-				
-		<!-- Wrapper -->
-			<div id="wrapper">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ë©”ì¸íŽ˜ì´ì§€</title>
+    <link rel="stylesheet" href="../css/Base_style.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main.html"><img src="../img/Base_logo.png" alt="Be Petmily Logo"></a>
+        </div>
+        
+        <!-- ì£¼ ë„¤ë¹„ê²Œì´ì…˜ -->
+        <nav class="main-nav">
+            <ul>
+                <!-- ê°œë³„ ë“œë¡­ë‹¤ìš´ ë©”ë‰´ ì„¤ì • -->
+                <li class="dropdown products-tab">
+                    <a>ì œí’ˆ</a>
+                    <div class="dropdown-content products-content">
+                        <a href="item_list.html">ì‚¬ë£Œ</a>
+                        <a href="#">ê°„ì‹</a>
+                        <a href="#">ìš©í’ˆ</a>
+                    </div>
+                </li>
+                <li class="dropdown facilities-tab">
+                    <a>ì‹œì„¤</a>
+                    <div class="dropdown-content facilities-content">
+                        <a href="#">ë³‘ì›</a>
+                        <a href="#">ìˆ™ë°•</a>
+                        <a href="#">ì¹´íŽ˜/ì‹ë‹¹</a>
+                        <a href="#">ê¸°íƒ€ì‹œì„¤</a>
+                        <a href="map.html">ì£¼ë³€ìœ„ì¹˜</a>
+                    </div>
+                </li>
+                <li class="dropdown health-tab">
+                    <a>ë§žì¶¤í˜• ì •ë³´</a>
+                    <div class="dropdown-content health-content">
+                        <a href="#" class="moveable">ì§ˆë³‘ì˜ˆì¸¡</a>
+                    </div>
+                </li>
+                <li class="dropdown community-tab">
+                    <a>ì»¤ë®¤ë‹ˆí‹°</a>
+                    <div class="dropdown-content community-content">
+                        <a href="#">ì•¨ë²”ê²Œì‹œíŒ</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+        <!-- ë¸Œë ˆë“œí¬ëŸ¼ ë„¤ë¹„ê²Œì´ì…˜ -->
+        <div class="nav-background"></div>
+        <div class="breadcrumb-background"></div> <!-- ì‚¬ê°í˜• ë„í˜•ì„ ì¶”ê°€ -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="main.html">í™ˆ</a><span>&gt;</span></li>
+            </ol>
+        </nav>
+        <div class="user-options">
+            <a href="#"><img src="../img/Base_user.png" alt="User Icon"></a>
+            <a href="#"><img src="../img/Base_cart.png" alt="Cart Icon"></a>
+        </div>
+    </header>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Forty</strong> <span>by HTML5 UP</span></a>
-						<nav>
-						
-							<% if (info == null) { %>
-						<!-- ·Î±×ÀÎ ¾ÈÇßÀ»¶§´Â ¾Æ·¡ ·Î±×ÀÎÀÌ -->
-								<a href="#menu">·Î±×ÀÎ</a>
-							<% }else { %>
-						<!-- ·Î±×ÀÎ ¾ÈÇßÀ»¶§´Â ¾Æ·¡ ·Î±×ÀÎÀÌ -->		
-								<a href="update.jsp">È¸¿øÁ¤º¸¼öÁ¤</a>				
-								<a href="LogoutService">·Î±×¾Æ¿ô</a>
-							<% } %>
-							<!-- ·Î±×ÀÎ ÈÄ Logout.jsp·Î ÀÌµ¿ÇÒ ¼ö ÀÖ´Â'·Î±×¾Æ¿ô'¸µÅ©¿Í '°³ÀÎÁ¤º¸¼öÁ¤'¸µÅ©¸¦ Ãâ·ÂÇÏ½Ã¿À. -->
-						</nav>
-					</header>
+    <!-- Wrapper: ë©”ì¸ ì½˜í…ì¸  ë° í‘¸í„°ë¥¼ ì¤‘ì•™ì— ë°°ì¹˜ -->
+    <div class="wrapper">
+        <main>
+            <div class="top-content">
+                <div class="left-section">
+                    <img src="../img/main_banner.jpg" alt="Sample Image">
+                </div>
+                <div class="right-section">
+                    <div class="banner-text">
+                        <h2 class=""><span class="BP">BE PETMILY</span>ë¥¼  <hr>ì•ˆì „í•˜ê³  íŽ¸ë¦¬í•˜ê²Œ ì´ìš©í•˜ì„¸ìš”</h2>
+                        <button><a href="login.html">BE PETMILY ë¡œê·¸ì¸</a></button>
+                        <div class="login">
+                            <a href="#">ì•„ì´ë”” ì°¾ê¸°</a> | <a href="#">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a> | <a href="sign_up.html">íšŒì›ê°€ìž…</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="banner-text-bottom">
+                        <button class="register-button">ë™ë¬¼ ë“±ë¡ë²ˆí˜¸ ë“±ë¡í•˜ê¸°</button>
+                    </div>
+                </div>
+            </div>
 
-				<!-- Menu -->
-					<nav id="menu">	
-						<ul class="links">
-							<li><h5>·Î±×ÀÎ</h5></li>
-								<form action="LoginService" method="post">
-									<li><input type="text" name="id" placeholder="idÀ» ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="password" name="pw" placeholder="PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="submit" value="LogIn" class="button fit"></li>
-								</form>
-						</ul>
-						<ul class="actions vertical">
-							<li><h5>È¸¿ø°¡ÀÔ</h5></li>
-								<form action="JoinService" method="post">
-									<li><input type="text" name="id" placeholder="id¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="password" name="pw" placeholder="PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="text" name="name" placeholder="name¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="email" name="email" placeholder="EmailÀ» ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="text" name="phone" placeholder="ÀüÈ­¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä"></li>
-									<li><input type="submit" value="JoinUs" class="button fit"></li>
-								</form>
-						</ul>
-					</nav>			
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<% if(info!=null){ %>
-									<h1><%= info.getEmail() %>´Ô È¯¿µÇÕ´Ï´Ù!</h1>
-								<% } else { %>
-									<h1>·Î±×ÀÎÀ» ¸ÕÀú ÁøÇàÇØÁÖ¼¼¿ä</h1>
-								<% } %>
-										
-								<!-- ·Î±×ÀÎ ÈÄ ·Î±×ÀÎ ÇÑ »ç¿ëÀÚÀÇ ¼¼¼Ç¾ÆÀÌµð·Î ¹Ù²Ù½Ã¿À.
-									 ex)smart´Ô È¯¿µÇÕ´Ï´Ù -->
-							</header>
-							<div class="content">
-								<p>¾Æ·¡´Â Áö±Ý±îÁö ¹è¿î À¥ ±â¼úµéÀÔ´Ï´Ù.<br></p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">È®ÀÎÇÏ±â</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+            <div class="section">  <!--ìƒí’ˆ ì•Œë ¤ì£¼ëŠ” ì½”ë“œ -->
+                <h2>ì´ ìƒí’ˆì€ ì–´ë•Œìš”?</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back10.jpg" alt="Product 1"></a>
+                        </button>
+                        <div>
+                            <p>ANF 6Free ì—°ì–´ì™€ ë³‘ì•„ë¦¬ì½© 6.5kg</p>
+                            <p class="price">47,400ì›</p>
+                        </div>
+                    </div>
 
-				<!-- Main -->
-					<div id="main">
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="images/pic01.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="#" class="link">HTML</a></h3>
-										<p>È¨ÆäÀÌÁö¸¦ ¸¸µå´Â ±âÃÊ ¾ð¾î</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="#" class="link">CSS</a></h3>
-										<p>HTMLÀ» µðÀÚÀÎÇØÁÖ´Â ¾ð¾î</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="#" class="link">Servlet/JSP</a></h3>
-										<p>Java¸¦ ±âº»À¸·Î ÇÑ À¥ ÇÁ·Î±×·¡¹Ö ¾ð¾î/½ºÅ©¸³Æ® ¾ð¾î</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="#" class="link">JavaScript</a></h3>
-										<p>HTML¿¡ ±âº»ÀûÀÎ ·ÎÁ÷À» Á¤ÀÇÇÒ ¼ö ÀÖ´Â ¾ð¾î</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="#" class="link">MVC</a></h3>
-										<p>À¥ ÇÁ·ÎÁ§Æ® Áß °¡Àå ¸¹ÀÌ »ç¿ëÇÏ´Â µðÀÚÀÎÆÐÅÏ</p>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="#" class="link">Web Project</a></h3>
-										<p>¿©·¯ºÐÀÇ ÃÖÁ¾ÇÁ·ÎÁ§Æ®¿¡ À¥ ±â¼úÀ» È°¿ëÇÏ¼¼¿ä!</p>
-									</header>
-								</article>
-							</section>
-					<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<header class="major">
-										<h2>³ª¿¡°Ô ¿Â ¸Þ¼¼Áö È®ÀÎÇÏ±â</h2>
-									</header>
-									<p></p>
-									<ul class="actions">
-										<% if (info == null){ %>
-										<li>·Î±×ÀÎÀ» ÇÏ¼¼¿ä.</li>
-										<% } else {
-										%>											
-												<li>
-												</li>
-												<br>
-											<% } %>										
-											
-									</ul>
-								</div>
-							</section>
+                    <!--  ë”ë¯¸  -->
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back9.jpg" alt="Product 2"></a>
+                        </button>
+                        <p>ë„ì¿„íŽ« ì•„ì´ìŠ¤ í¬ë¦¼ 120ml 3ê°œ</p>
+                        <p class="price">18,000ì›</p>
+                    </div>
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back8.jpg" alt="Product 3"></a>
+                        </button>
+                        <p>ë§ê³ ì™• ìˆ˜ì˜ìž¥</p>
+                        <p class="price">9,500ì›</p>
+                    </div>
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back7.jpg" alt="Product 4"></a>
+                        </button>
+                        <p>ìš”ì…‰ì˜ í”„ë¡œì íŠ¸ ë§¤íŠ¸</p>
+                        <p class="price">34,000ì›</p>
+                    </div>
+                </div>
+            </div>
 
-					</div>
+            <div class="section">
+                <h2>ì•ˆì „í•œ ì‚°ì±…, ê·€ì—¬ì›€ í•œìŠ¤í‘¼!</h2>
+                <div class="product-list">
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back6.jpg" alt="Product 5"></a>
+                        </button>
+                        <p>ë‘ìž‡ ë²„ê·¸ ë¦¬íŽ˜</p>
+                        <p class="price">22,900ì›</p>
+                    </div>
+                    <!--  ë”ë¯¸  -->
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back5.jpg" alt="Product 6"></a>
+                        </button>
+                        <p>íŒ¬í‹°ì˜¨ ì†Œí”„íŠ¸ íŒ¬í‹°</p>
+                        <p class="price">13,000ì›</p>
+                    </div>
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back4.jpg" alt="Product 7"></a>
+                        </button>
+                        <p>íŽ«í”„ëžœë“œ ì…”ì¸ </p>
+                        <p class="price">29,900ì›</p>
+                    </div>
+                    <div class="product-item">
+                        <button type="button">
+                            <a href="#"><img src="../img/album_back13.jpg" alt="Product 8"></a>
+                        </button>
+                        <p>ë°•ìŠ¤ì•¤í™€ ëª©ì¤„</p>
+                        <p class="price">22,000ì›</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- ë°°ë„ˆ: ì „ì²´ ë„ˆë¹„ë¡œ ì„¤ì • -->
+    <section class="banner">
+        <img src="../img/Base_banner.png" alt="Be Petmily Banner">
+    </section>
+    <footer class="footer-wrapper">
+        <div class="footer-container">
+            <div class="footer-top-bar">
+                <span class="footer-lang">ðŸŒ ëŒ€í•œë¯¼êµ­/í•œêµ­ì–´ </span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="../img/Base_up01.png" alt="ë§¨ ìœ„" srcset=""></a></span>
+            </div>
+            <hr> 
+            <div class="footer-top">
+                <div class="footer-links">
+                    <h3>ì œí’ˆ</h3>
+                    <ul>
+                        <li><a href="item_list.html">ì‚¬ë£Œ</a></li>
+                        <li><a href="#">ê°„ì‹</a></li>
+                        <li><a href="#">ìš©í’ˆ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>ì• ê²¬ ê´€ë ¨ ì‹œì„¤</h3>
+                    <ul>
+                        <li><a href="#">ë³‘ì›</a></li>
+                        <li><a href="#">ìˆ™ë°•</a></li>
+                        <li><a href="#">ì¹´íŽ˜/ì‹ë‹¹</a></li>
+                        <li><a href="#">ì£¼ë³€ì‹œì„¤</a></li>
+                        <li><a href="map.html">ì£¼ë³€ìœ„ì¹˜</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>ë§žì¶¤í˜• ì •ë³´</h3>
+                    <ul>
+                        <li><a href="#">ì§ˆë³‘ì˜ˆì¸¡</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>ì»¤ë®¤ë‹ˆí‹°</h3>
+                    <ul>
+                        <li><a href="#">ì•¨ë²”ê²Œì‹œíŒ</a></li>
+                    </ul>   
+                </div>
+            </div>
+            <hr>
+            <div class="footer-contact">
+                <p>Be Petmilyì™€ ìƒë‹´í•˜ì„¸ìš”</p>
+                <p>í‰ì¼ 09:00 ~ 18:00 ì£¼ë§/ê³µíœ´ì¼ íœ´ë¬´</p>
+                <p>070-123-4567</p>
+                <a href="mailto:info@bepetmily.com">ë¬¸ì˜í•˜ê¸°</a>
+            </div>
+            <div class="footer-bottom">
+                <p>ê°œì¸ì •ë³´ ë³´í˜¸ì„¼í„° | ë²•ë¥ ì •ë³´ | ê°œì¸ì •ë³´ ì²˜ë¦¬ë°©ì¹¨</p>
+                <p>Â©2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
+            </div>
+            <div class="back-to-top">
+                <a href="#" id="back-to-top"><img src="../img/Base_up02.png" alt="ë§¨ ìœ„ë¡œ"></a>
+            </div>
+        </div>
+    </footer>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form action="MessageInsertService" method="post">
-								<div class="field half first">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" placeholder="º¸³»´Â »ç¶÷ ÀÌ¸§" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" placeholder="º¸³¾ »ç¶÷ ÀÌ¸ÞÀÏ"/>
-									</div>
-
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="contents" id="message" rows="6"></textarea>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="special" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-envelope"></span>
-										<h3>Email</h3>
-										<% if (info != null){ %>
-										<a href="#"><%= info.getEmail() %></a>
-										<% } else { %>
-											<span>·Î±×ÀÎÀ» ¸ÕÀú ÁøÇàÇØÁÖ¼¼¿ä</span>
-										<% } %>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-phone"></span>
-										<h3>Phone</h3>
-										<% if (info != null){ %>
-											<span><%= info.getPhone() %></span>
-										<% } else { %>
-											<span>·Î±×ÀÎÀ» ¸ÕÀú ÁøÇàÇØÁÖ¼¼¿ä</span>
-										<% } %>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon alt fa-home"></span>
-										<h3>Address</h3>	
-										<% if (info != null){ %>
-										<span></span>
-										<% } else { %>
-											<span>·Î±×ÀÎÀ» ¸ÕÀú ÁøÇàÇØÁÖ¼¼¿ä</span>
-										<% } %>
-										<!-- ·Î±×ÀÎ ÇÑ »ç¿ëÀÚÀÇ ÁýÁÖ¼Ò¸¦ Ãâ·ÂÇÏ½Ã¿À -->
-									</div>
-								</section>
-							</section>					
-						</div>
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <script>
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
+</body>
 </html>
 

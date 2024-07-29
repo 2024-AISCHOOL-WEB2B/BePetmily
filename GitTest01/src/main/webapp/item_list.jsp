@@ -2,13 +2,13 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.ProductDAO"%>
 <%@page import="com.model.ProductDTO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Á¦Ç° ¸®½ºÆ® ÆäÀÌÁö</title>
+<title>ì œí’ˆ ë¦¬ìŠ¤íŠ¸ íŽ˜ì´ì§€</title>
 <link rel="stylesheet" href="assets/css/Base_style.css?v=1.0">
 <link rel="stylesheet" href="assets/css/item_list.css?v=1.0">
 </head>
@@ -17,45 +17,45 @@
         <div class="logo">
             <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
-        <!-- ÁÖ ³×ºñ°ÔÀÌ¼Ç -->
+        <!-- ì£¼ ë„¤ë¹„ê²Œì´ì…˜ -->
         <nav class="main-nav">
             <ul>
-                <li class="dropdown products-tab"><a>Á¦Ç°</a>
+                <li class="dropdown products-tab"><a>ì œí’ˆ</a>
                     <div class="dropdown-content products-content">
-                        <a href="item_list.jsp?cate=food&page=1">»ç·á</a>
-                        <a href="item_list.jsp?cate=snack&page=1">°£½Ä</a>
-                        <a href="item_list.jsp?cate=etc&page=1">¿ëÇ°</a>
+                        <a href="item_list.jsp?cate=food&page=1">ì‚¬ë£Œ</a>
+                        <a href="item_list.jsp?cate=snack&page=1">ê°„ì‹</a>
+                        <a href="item_list.jsp?cate=etc&page=1">ìš©í’ˆ</a>
                     </div>
                 </li>
-                <li class="dropdown facilities-tab"><a>½Ã¼³</a>
+                <li class="dropdown facilities-tab"><a>ì‹œì„¤</a>
                     <div class="dropdown-content facilities-content">
-                        <a href="#">º´¿ø</a>
-                        <a href="#">¼÷¹Ú</a>
-                        <a href="#">Ä«Æä/½Ä´ç</a>
-                        <a href="#">±âÅ¸½Ã¼³</a>
-                        <a href="kaomap2 ok.html">ÁÖº¯À§Ä¡</a>
+                        <a href="#">ë³‘ì›</a>
+                        <a href="#">ìˆ™ë°•</a>
+                        <a href="#">ì¹´íŽ˜/ì‹ë‹¹</a>
+                        <a href="#">ê¸°íƒ€ì‹œì„¤</a>
+                        <a href="kaomap2 ok.html">ì£¼ë³€ìœ„ì¹˜</a>
                     </div>
                 </li>
-                <li class="dropdown health-tab"><a>¸ÂÃãÇü Á¤º¸</a>
+                <li class="dropdown health-tab"><a>ë§žì¶¤í˜• ì •ë³´</a>
                     <div class="dropdown-content health-content">
-                        <a href="#" class="moveable">Áúº´¿¹Ãø</a>
+                        <a href="#" class="moveable">ì§ˆë³‘ì˜ˆì¸¡</a>
                     </div>
                 </li>
-                <li class="dropdown community-tab"><a>Ä¿¹Â´ÏÆ¼</a>
+                <li class="dropdown community-tab"><a>ì»¤ë®¤ë‹ˆí‹°</a>
                     <div class="dropdown-content community-content">
-                        <a href="#">¾Ù¹ü°Ô½ÃÆÇ</a>
+                        <a href="#">ì•¨ë²”ê²Œì‹œíŒ</a>
                     </div>
                 </li>
             </ul>
         </nav>
         <hr>
-        <!-- ºê·¹µåÅ©·³ ³×ºñ°ÔÀÌ¼Ç -->
+        <!-- ë¸Œë ˆë“œí¬ëŸ¼ ë„¤ë¹„ê²Œì´ì…˜ -->
         <div class="nav-background"></div>
         <div class="breadcrumb-background"></div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="main.html">È¨</a><span>&gt;</span></li>
-                <li class="breadcrumb-item"><a href="item_list.jsp?page=1">Á¦Ç°</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="main.html">í™ˆ</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="item_list.jsp?page=1">ì œí’ˆ</a><span>&gt;</span></li>
             </ol>
         </nav>
         <div class="user-options">
@@ -63,7 +63,7 @@
             <a href="#"><img src="assets/img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
-    <!-- Wrapper: ¸ÞÀÎ ÄÜÅÙÃ÷ ¹× ÇªÅÍ¸¦ Áß¾Ó¿¡ ¹èÄ¡ -->
+    <!-- Wrapper: ë©”ì¸ ì½˜í…ì¸  ë° í‘¸í„°ë¥¼ ì¤‘ì•™ì— ë°°ì¹˜ -->
     <div class="wrapper">
         <main>
             <div class="container">
@@ -77,21 +77,21 @@
 				    ArrayList<ProductDTO> products = (ArrayList<ProductDTO>) request.getAttribute("products");
 				    PageDTO pages = (PageDTO) request.getAttribute("pages");					
 				    if (products == null) {
-				        products = dao.getProductList(curPage,cate); // ÇöÀç ÆäÀÌÁö¿¡ ÇØ´çÇÏ´Â Á¦Ç° ¸ñ·ÏÀ» °¡Á®¿É´Ï´Ù.
+				        products = dao.getProductList(curPage,cate); // í˜„ìž¬ íŽ˜ì´ì§€ì— í•´ë‹¹í•˜ëŠ” ì œí’ˆ ëª©ë¡ì„ ê°€ì ¸ì˜µë‹ˆë‹¤.
 				    }
 				    if (pages == null) {
-				        pages = new PageDTO(curPage, 15, dao.getTotal(cate)); // ÇöÀç ÆäÀÌÁö¸¦ ±âÁØÀ¸·Î PageDTO¸¦ »ý¼ºÇÕ´Ï´Ù.
+				        pages = new PageDTO(curPage, 15, dao.getTotal(cate)); // í˜„ìž¬ íŽ˜ì´ì§€ë¥¼ ê¸°ì¤€ìœ¼ë¡œ PageDTOë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
 				    }
 				%>
-                    <!-- Á¦Ç° ¸ñ·Ï Ãâ·Â -->
+                    <!-- ì œí’ˆ ëª©ë¡ ì¶œë ¥ -->
                     <% for (ProductDTO product : products) { %>
                         <div class="product-detail">
-                            <a href="<%= product.getProductUrl() %>"><img src="<%= product.getImagepath() %>" alt="Á¦Ç° ÀÌ¹ÌÁö"></a>
+                            <a href="<%= product.getProductUrl() %>"><img src="<%= product.getImagepath() %>" alt="ì œí’ˆ ì´ë¯¸ì§€"></a>
                             <h1><%= product.getProductName() %></h1>
-                            <p>°¡°Ý: <%= product.getProductPrice() %></p>
+                            <p>ê°€ê²©: <%= product.getProductPrice() %></p>
                            <form action="buy.html" method="get">
                                 <a href="<%= product.getProductUrl() %>">
-                                    <button type="button">±¸¸ÅÇÏ±â</button>
+                                    <button type="button">êµ¬ë§¤í•˜ê¸°</button>
                                 </a>
                             </form>
                         </div>
@@ -108,63 +108,63 @@
             </div>
         	</main>
         </div>
-        <!-- ¹è³Ê: ÀüÃ¼ ³Êºñ·Î ¼³Á¤ -->
+        <!-- ë°°ë„ˆ: ì „ì²´ ë„ˆë¹„ë¡œ ì„¤ì • -->
         <section class="banner">
             <img src="assets/img/Base_banner.png" alt="Be Petmily Banner">
         </section>
         <footer class="footer-wrapper">
             <div class="footer-container">
                 <div class="footer-top-bar">
-                    <span class="footer-lang"> ´ëÇÑ¹Î±¹/ÇÑ±¹¾î </span>
-                    <span class="footer-top"><a href="#" id="back-to-top1"><img src="assets/img/Base_up01.png" alt="¸Ç À§"></a></span>
+                    <span class="footer-lang"> ëŒ€í•œë¯¼êµ­/í•œêµ­ì–´ </span>
+                    <span class="footer-top"><a href="#" id="back-to-top1"><img src="assets/img/Base_up01.png" alt="ë§¨ ìœ„"></a></span>
                 </div>
                 <hr>
                 <div class="footer-top">
                     <div class="footer-links">
-                        <h3>Á¦Ç°</h3>
+                        <h3>ì œí’ˆ</h3>
                         <ul>
-                            <li><a href="item_list.jsp?page=1">»ç·á</a></li>
-                            <li><a href="#">°£½Ä</a></li>
-                            <li><a href="#">¿ëÇ°</a></li>
+                            <li><a href="item_list.jsp?page=1">ì‚¬ë£Œ</a></li>
+                            <li><a href="#">ê°„ì‹</a></li>
+                            <li><a href="#">ìš©í’ˆ</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
-                        <h3>¾Ö°ß °ü·Ã ½Ã¼³</h3>
+                        <h3>ì• ê²¬ ê´€ë ¨ ì‹œì„¤</h3>
                         <ul>
-                            <li><a href="#">º´¿ø</a></li>
-                            <li><a href="#">¼÷¹Ú</a></li>
-                            <li><a href="#">Ä«Æä/½Ä´ç</a></li>
-                            <li><a href="#">±âÅ¸½Ã¼³</a></li>
-                            <li><a href="kaomap2 ok.html">ÁÖº¯À§Ä¡</a></li>
+                            <li><a href="#">ë³‘ì›</a></li>
+                            <li><a href="#">ìˆ™ë°•</a></li>
+                            <li><a href="#">ì¹´íŽ˜/ì‹ë‹¹</a></li>
+                            <li><a href="#">ê¸°íƒ€ì‹œì„¤</a></li>
+                            <li><a href="kaomap2 ok.html">ì£¼ë³€ìœ„ì¹˜</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
-                        <h3>¸ÂÃãÇü Á¤º¸</h3>
+                        <h3>ë§žì¶¤í˜• ì •ë³´</h3>
                         <ul>
-                            <li><a href="#">Áúº´¿¹Ãø</a></li>
+                            <li><a href="#">ì§ˆë³‘ì˜ˆì¸¡</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
-                    <h3>Ä¿¹Â´ÏÆ¼</h3>
+                    <h3>ì»¤ë®¤ë‹ˆí‹°</h3>
                     <ul>
-                        <!-- <li><a href="#">ÀÚÁÖ ¹¯´Â Áú¹®</a></li> -->
-                        <li><a href="#">¾Ù¹ü°Ô½ÃÆÇ</a></li>
+                        <!-- <li><a href="#">ìžì£¼ ë¬»ëŠ” ì§ˆë¬¸</a></li> -->
+                        <li><a href="#">ì•¨ë²”ê²Œì‹œíŒ</a></li>
                     </ul>   
                 	</div>
                 </div>
 	            <hr>
 	            <div class="footer-contact">
-	                <p>Be Petmily¿Í »ó´ãÇÏ¼¼¿ä</p>
-	                <p>ÆòÀÏ 09:00 ~ 18:00 ÁÖ¸»/°øÈÞÀÏ ÈÞ¹«</p>
+	                <p>Be Petmilyì™€ ìƒë‹´í•˜ì„¸ìš”</p>
+	                <p>í‰ì¼ 09:00 ~ 18:00 ì£¼ë§/ê³µíœ´ì¼ íœ´ë¬´</p>
 	                <p>070-123-4567</p>
-	                <a href="mailto:info@bepetmily.com">¹®ÀÇÇÏ±â</a>
+	                <a href="mailto:info@bepetmily.com">ë¬¸ì˜í•˜ê¸°</a>
 	            </div>
 	            <div class="footer-bottom">
-	                <p>°³ÀÎÁ¤º¸ º¸È£¼¾ÅÍ | ¹ý·üÁ¤º¸ | °³ÀÎÁ¤º¸ Ã³¸®¹æÄ§</p>
+	                <p>ê°œì¸ì •ë³´ ë³´í˜¸ì„¼í„° | ë²•ë¥ ì •ë³´ | ê°œì¸ì •ë³´ ì²˜ë¦¬ë°©ì¹¨</p>
 	                <p>2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
 	            </div>
 	            <div class="back-to-top">
-	                <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="¸Ç À§·Î"></a>
+	                <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="ë§¨ ìœ„ë¡œ"></a>
 	            </div>
 	        </div>
 	    </footer>
