@@ -15,7 +15,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
+            <a href="main.jsp"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
         <!-- 주 네비게이션 -->
         <nav class="main-nav">
@@ -29,21 +29,21 @@
                 </li>
                 <li class="dropdown facilities-tab"><a>시설</a>
                     <div class="dropdown-content facilities-content">
-                        <a href="#">병원</a>
-                        <a href="#">숙박</a>
-                        <a href="#">카페/식당</a>
-                        <a href="#">기타시설</a>
-                        <a href="kaomap2 ok.html">주변위치</a>
+                        <a href="map.jsp?cate=hos&page=1">병원</a>
+                        <a href="map.jsp?cate=acco&page=1">숙박</a>
+                        <a href="map.jsp?cate=cafe&page=1">카페/식당</a>
+                        <a href="map.jsp?cate=etc&page=1">기타시설</a>
+                        <a href="map.jsp?cate=all&page=1">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab"><a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
-                        <a href="#" class="moveable">질병예측</a>
+                        <a href="DiseasePrediction.jsp" class="moveable">질병예측</a>
                     </div>
                 </li>
                 <li class="dropdown community-tab"><a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="#">앨범게시판</a>
+                        <a href="album_list.jsp">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -54,8 +54,8 @@
         <div class="breadcrumb-background"></div>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
-                <li class="breadcrumb-item"><a href="item_list.jsp?page=1">제품</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item active" aria-current="page">리스트</li> 
             </ol>
         </nav>
         <div class="user-options">
@@ -68,21 +68,21 @@
         <main>
             <div class="container">
                 <div class="product-grid">
-				<%
-				    String cate = request.getParameter("cate");
-				    String pageS = request.getParameter("page");
-				    int curPage = (pageS != null) ? Integer.parseInt(pageS) : 1;
-					
-				    ProductDAO dao = new ProductDAO();
-				    ArrayList<ProductDTO> products = (ArrayList<ProductDTO>) request.getAttribute("products");
-				    PageDTO pages = (PageDTO) request.getAttribute("pages");					
-				    if (products == null) {
-				        products = dao.getProductList(curPage,cate); // 현재 페이지에 해당하는 제품 목록을 가져옵니다.
-				    }
-				    if (pages == null) {
-				        pages = new PageDTO(curPage, 15, dao.getTotal(cate)); // 현재 페이지를 기준으로 PageDTO를 생성합니다.
-				    }
-				%>
+                <%
+                    String cate = request.getParameter("cate");
+                    String pageS = request.getParameter("page");
+                    int curPage = (pageS != null) ? Integer.parseInt(pageS) : 1;
+                    
+                    ProductDAO dao = new ProductDAO();
+                    ArrayList<ProductDTO> products = (ArrayList<ProductDTO>) request.getAttribute("products");
+                    PageDTO pages = (PageDTO) request.getAttribute("pages");                    
+                    if (products == null) {
+                        products = dao.getProductList(curPage,cate); // 현재 페이지에 해당하는 제품 목록을 가져옵니다.
+                    }
+                    if (pages == null) {
+                        pages = new PageDTO(curPage, 15, dao.getTotal(cate)); // 현재 페이지를 기준으로 PageDTO를 생성합니다.
+                    }
+                %>
                     <!-- 제품 목록 출력 -->
                     <% for (ProductDTO product : products) { %>
                         <div class="product-detail">
@@ -101,12 +101,12 @@
             <div class="pagination">
                 <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() - 1 %>" class="prev-page">&laquo;</a>
                 <% for (int i = pages.getStartPage(); i <= pages.getEndPage(); i++) { %>
-                	<a href="item_list.jsp?cate=<%=cate%>&page=<%= i %>" class="page-number"><%= i %></a>
+                    <a href="item_list.jsp?cate=<%=cate%>&page=<%= i %>" class="page-number"><%= i %></a>
                 <% } %>
                 <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() + 1 %>" class="next-page">&raquo;</a>
                 
             </div>
-        	</main>
+            </main>
         </div>
         <!-- 배너: 전체 너비로 설정 -->
         <section class="banner">
@@ -124,59 +124,59 @@
                         <h3>제품</h3>
                         <ul>
                             <li><a href="item_list.jsp?page=1">사료</a></li>
-                            <li><a href="#">간식</a></li>
-                            <li><a href="#">용품</a></li>
+                            <li><a href="item_list.jsp?cate=snack&page=1">간식</a></li>
+                            <li><a href="item_list.jsp?cate=etc&page=1">용품</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
                         <h3>애견 관련 시설</h3>
                         <ul>
-                            <li><a href="#">병원</a></li>
-                            <li><a href="#">숙박</a></li>
-                            <li><a href="#">카페/식당</a></li>
-                            <li><a href="#">기타시설</a></li>
-                            <li><a href="kaomap2 ok.html">주변위치</a></li>
+                            <li><a href="map.jsp?cate=hos&page=1">병원</a></li>
+                            <li><a href="map.jsp?cate=acco&page=1">숙박</a></li>
+                            <li><a href="map.jsp?cate=cafe&page=1">카페/식당</a></li>
+                            <li><a href="map.jsp?cate=etc&page=1">기타시설</a></li>
+                            <li><a href="map.jsp?cate=all&page=1">주변위치</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
                         <h3>맞춤형 정보</h3>
                         <ul>
-                            <li><a href="#">질병예측</a></li>
+                            <li><a href="DiseasePrediction.jsp">질병예측</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="#">앨범게시판</a></li>
+                        <li><a href="album_list.jsp">앨범게시판</a></li>
                     </ul>   
-                	</div>
+                    </div>
                 </div>
-	            <hr>
-	            <div class="footer-contact">
-	                <p>Be Petmily와 상담하세요</p>
-	                <p>평일 09:00 ~ 18:00 주말/공휴일 휴무</p>
-	                <p>070-123-4567</p>
-	                <a href="mailto:info@bepetmily.com">문의하기</a>
-	            </div>
-	            <div class="footer-bottom">
-	                <p>개인정보 보호센터 | 법률정보 | 개인정보 처리방침</p>
-	                <p>2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
-	            </div>
-	            <div class="back-to-top">
-	                <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="맨 위로"></a>
-	            </div>
-	        </div>
-	    </footer>
-		<script>
-		        
-		
-		        document.getElementById('back-to-top').addEventListener('click', function(e) {
-		            e.preventDefault();
-		            window.scrollTo({top: 0, behavior: 'smooth'});
-		        });
-		</script>
-	    
+                <hr>
+                <div class="footer-contact">
+                    <p>Be Petmily와 상담하세요</p>
+                    <p>평일 09:00 ~ 18:00 주말/공휴일 휴무</p>
+                    <p>070-123-4567</p>
+                    <a href="mailto:info@bepetmily.com">문의하기</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>개인정보 보호센터 | 법률정보 | 개인정보 처리방침</p>
+                    <p>2017 Be Petmily. All rights reserved. An Affiliate of Mars, Incorporated.</p>
+                </div>
+                <div class="back-to-top">
+                    <a href="#" id="back-to-top"><img src="assets/img/Base_up02.png" alt="맨 위로"></a>
+                </div>
+            </div>
+        </footer>
+        <script>
+                
+        
+                document.getElementById('back-to-top').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({top: 0, behavior: 'smooth'});
+                });
+        </script>
+    
     
     
 </body>

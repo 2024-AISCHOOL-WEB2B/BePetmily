@@ -12,26 +12,26 @@
 <body>
     <header>
         <div class="logo">
-            <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
+            <a href="main.jsp"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
         <nav>
             <ul>
                 <li class="dropdown products-tab">
                     <a>제품</a>
                     <div class="dropdown-content products-content">
-                        <a href="assets/html/item_list.html">사료</a>
-                        <a href="#">간식</a>
-                        <a href="#">용품</a>
+                        <a href="item_list.jsp?cate=food&page=1">사료</a>
+                        <a href="item_list.jsp?cate=snack&page=1">간식</a>
+                        <a href="item_list.jsp?cate=etc&page=1">용품</a>
                     </div>
                 </li>
                 <li class="dropdown facilities-tab">
                     <a>시설</a>
                     <div class="dropdown-content facilities-content">
-                        <a href="#">병원</a>
-                        <a href="#">숙박</a>
-                        <a href="#">카페/식당</a>
-                        <a href="#">기타시설</a>
-                        <a href="assets/html/map.html">주변위치</a>
+                        <a href="map.jsp?cate=hos&page=1">병원</a>
+                        <a href="map.jsp?cate=acco&page=1">숙박</a>
+                        <a href="map.jsp?cate=cafe&page=1">카페/식당</a>
+                        <a href="map.jsp?cate=etc&page=1">기타시설</a>
+                        <a href="map.jsp?cate=all&page=1">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab">
@@ -43,7 +43,7 @@
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="assets/html/album_list.html">앨범게시판</a>
+                        <a href="album_list.jsp">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -54,9 +54,9 @@
         <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="assets/html/main.html">홈</a><span>&gt;</span></li>
-                <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>
-                <li class="breadcrumb-item active" aria-current="page">사료</li> -->
+                <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
+                <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>-->
+                <li class="breadcrumb-item active" aria-current="page">질병예측</li> 
             </ol>
         </nav>
         <div class="user-options">
@@ -109,26 +109,26 @@
         <div class="footer-container">
             <div class="footer-top-bar">
                 <span class="footer-lang">🌐 대한민국/한국어 </span>
-                <span class="footer-top"><a href="#" id="back-to-top1"><img src="assets/img/Base_up01.png" alt="맨 위" srcset=""></a></span>
+                <span class="footer-top"><a href="#" id="back-to-top1"><img src="assets/img/Base_up01.png" alt="맨 위로"></a></span>
             </div>
             <hr> 
             <div class="footer-top">
                 <div class="footer-links">
                     <h3>제품</h3>
                     <ul>
-                        <li><a href="assets/html/item_list.html">사료</a></li>
-                        <li><a href="#">간식</a></li>
-                        <li><a href="#">용품</a></li>
+                        <li><a href="item_list.jsp?cate=food&page=1">사료</a></li>
+                        <li><a href="item_list.jsp?cate=snack&page=1">간식</a></li>
+                        <li><a href="item_list.jsp?cate=etc&page=1">용품</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>애견 관련 시설</h3>
                     <ul>
-                        <li><a href="#">병원</a></li>
-                        <li><a href="#">숙박</a></li>
-                        <li><a href="#">카페/식당</a></li>
-                        <li><a href="#">기타시설</a></li>
-                        <li><a href="assets/html/map.html">주변위치</a></li>
+                        <li><a href="map.jsp?cate=hos&page=1">병원</a></li>
+                        <li><a href="map.jsp?cate=acco&page=1">숙박</a></li>
+                        <li><a href="map.jsp?cate=cafe&page=1">카페/식당</a></li>
+                        <li><a href="map.jsp?cate=etc&page=1">기타시설</a></li>
+                        <li><a href="map.jsp?cate=all&page=1">주변위치</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -140,7 +140,7 @@
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
-                        <li><a href="assets/html/album_list.html">앨범게시판</a></li>
+                        <li><a href="album_list.jsp">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>

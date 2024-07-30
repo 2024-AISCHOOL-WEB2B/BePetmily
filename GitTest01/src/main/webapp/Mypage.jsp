@@ -1,14 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <title>마이페이지</title>
     <link rel="stylesheet" href="assets/css/Base_style.css">
-    <link rel="stylesheet" href="assets/css/sign_up.css">
+    <link rel="stylesheet" href="assets/css/Mypage.css">
 </head>
 <body>
     <header>
@@ -61,7 +60,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
                 <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li> -->
-                <li class="breadcrumb-item active" aria-current="page">회원가입</li> 
+                <li class="breadcrumb-item active" aria-current="page">마이페이지</li> 
             </ol>
         </nav>
         <div class="user-options">
@@ -73,46 +72,50 @@
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
         <main>
-            <div class="login-section">
-                <h1>회원가입</h1>
-                <p><span>BE PETMILY</span>에 가입하여 더 많은 혜택을 즐겨보세요!   </p>
-                <form>
-                    <div class="input-box-group">
-                        <div class="input-box">
-                            <i class="user-icon">&#128054;</i>
-                            <input type="text" id="username" name="username" placeholder="아이디">
-                            <button type="button" class="check-button">중복체크</button>
+            <div class="left-content">
+                <div class="login-section">
+                    <form>
+                        <h1>마이페이지</h1>
+                        <b>회원 정보 수정</b>
+                        <div class="input-box-group">
+                            <div class="input-box">
+                                <input type="password" id="password" name="password" placeholder="비밀번호">
+                            </div>
+                            <div class="input-box">  
+                                <input type="text" id="name" name="name" placeholder="이름">
+                            </div>
+                            <div class="input-box">
+                                <input type="email" id="email" name="email" placeholder="이메일">
+                            </div>
+                            <div class="input-box">
+                                <input type="tel" id="phone" name="phone" placeholder="휴대전화번호">
+                            </div>
                         </div>
-                        <div class="input-box">
-                            <i class="lock-icon">🔒</i>
-                            <input type="password" id="password" name="password" placeholder="비밀번호">
+                        <button type="submit" class="register-button">회원 정보 수정</button>
+                    </form>
+                    <h1>반려견 정보 수정</h1>
+                    <b>반려견 정보 수정</b>
+                    <form>
+                        <div class="input-box-group">
+                            <div class="input-box">
+                                <input type="text" id="pet_name" name="pet_name" placeholder="이름">
+                            </div>                    
+                            <div class="input-box">
+                                <input type="text" id="gender" name="gender" placeholder="성별">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" id="breed" name="breed" placeholder="품종">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" id="birthday" name="birthday" placeholder="생일">
+                            </div>
+                            <div class="input-box">
+                                <input type="text" id="neuter" name="neuter" placeholder="중성화여부">            
+                            </div>
                         </div>
-                    </div>
-                    <div class="input-box-group">
-                        <div class="input-box">
-                            <i class="user-icon">👤</i>
-                            <input type="text" id="name" name="name" placeholder="이름">
-                        </div>
-                        <div class="input-box">
-                            <i class="email-icon">📧</i>
-                            <input type="email" id="email" name="email" placeholder="이메일">
-                        </div>
-                        <div class="input-box">
-                            <i class="telecom-icon">📞</i>
-                            <select id="telecom" name="telecom">
-                                <option value="" disabled selected>통신사 선택</option>
-                                <option value="kt">KT</option>
-                                <option value="lg">LG</option>
-                                <option value="skt">SKT</option>
-                            </select>
-                        </div>
-                        <div class="input-box">
-                            <i class="phone-icon">📱</i>
-                            <input type="tel" id="phone" name="phone" placeholder="휴대전화번호">
-                        </div>
-                    </div>
-                    <button type="submit" class="register-button">BE PETMILY 회원가입</button>
-                </form>
+                        <button type="submit" class="register-button">반려견 정보 수정</button>
+                    </form>
+                </div>
             </div>
         </main>
     </div>
@@ -141,8 +144,7 @@
                     <ul>
                         <li><a href="map.jsp?cate=hos&page=1">병원</a></li>
                         <li><a href="map.jsp?cate=acco&page=1">숙박</a></li>
-                        <li><a href="map.jsp?cate=cafe&page=1">카페/식당</a></li>
-                        <li><a href="map.jsp?cate=etc&page=1">기타시설</a></li>
+                        <li><a href="map.jsp?cate=cafe&page=1">카페</a></li>
                         <li><a href="map.jsp?cate=all&page=1">주변위치</a></li>
                     </ul>
                 </div>
