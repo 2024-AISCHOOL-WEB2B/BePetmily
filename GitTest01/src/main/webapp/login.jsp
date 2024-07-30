@@ -65,7 +65,7 @@
             </ol>
         </nav>
         <div class="user-options">
-            <a href="MyPage.jsp"><img src="assets/img/Base_user.png" alt="User Icon"></a>
+            <a href="Mypage2.jsp"><img src="assets/img/Base_user.png" alt="User Icon"></a>
             <a href="#"><img src="assets/img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
