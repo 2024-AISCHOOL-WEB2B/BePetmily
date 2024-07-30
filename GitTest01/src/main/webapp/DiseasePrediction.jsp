@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>질병 예측</title>
     <link rel="stylesheet" href="assets/css/Base_style.css">
-    <link rel="stylesheet" href="assets/css/DiseasePrediction2.css">
+    <link rel="stylesheet" href="assets/css/DiseasePrediction.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -78,7 +78,14 @@
                             <p>슬개골 탈구</p>
                         </div>
                         <div class="info-box large">
-                        <h2>질병케어 방법</h2>
+                        <h2>건강정보</h2>
+                            <p>강아지의 무릎에는 동그랗고 작은 뼈인 슬개골이 있다.
+                            본래 슬개골은 깊게 파인 활차구 홈 안에 들어가서 무릎 관절이 움직이도록 도와주는 역할을 하지만,
+                            슬개골이 본래의 위치에서 벗어날 수 있다. 
+                            이러한 상태를 강아지 슬개골 탈구라고 부른다. </p>
+                        </div>
+                        <div class="info-box large2">
+                        <h2>건강식품/활동</h2>
                             <p>강아지의 무릎에는 동그랗고 작은 뼈인 슬개골이 있다.
                             본래 슬개골은 깊게 파인 활차구 홈 안에 들어가서 무릎 관절이 움직이도록 도와주는 역할을 하지만,
                             슬개골이 본래의 위치에서 벗어날 수 있다. 

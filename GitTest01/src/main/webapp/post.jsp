@@ -58,7 +58,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
-                <li class="breadcrumb-item"><a href="item_list.html">앨범게시판</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="album_list.jsp">앨범게시판</a><span>&gt;</span></li>
                 <li class="breadcrumb-item active" aria-current="page">글쓰기</li> 
             </ol>
         </nav>
