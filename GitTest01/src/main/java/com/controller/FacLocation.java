@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import com.model.FacDAO;
 import com.model.FacDTO;
+import com.model.PageDTO;
 
 @WebServlet("/FacLocation")
 public class FacLocation extends HttpServlet {
@@ -21,12 +22,17 @@ public class FacLocation extends HttpServlet {
     	String longitude = request.getParameter("longitude");
         String cate = request.getParameter("cate");
         
+        int curPage = Integer.parseInt(request.getParameter("page"));
+        int pageSize = 8;
+        
         System.out.println("Category: " + cate);
         System.out.println("Latitude: " + latitude);
         System.out.println("Longitude: " + longitude); 	//jsp 에서 잘 받아와 지는지 확인
 
         FacDAO dao = new FacDAO();
         ArrayList<FacDTO> facs = dao.getFacs(latitude, longitude, cate);
+        int totalCnt = dao.getTotal(cate);
+        PageDTO pages = new PageDTO(curPage, pageSize, totalCnt);
         
 //        ArrayList<Double> distances = dao.getDistance(facs, latitude, longitude);
 //        
@@ -36,7 +42,7 @@ public class FacLocation extends HttpServlet {
 //        for(FacDTO fac : facs) {
 //        	System.out.println(fac.getFacId());		//객체 생성 확인
 //        }		
-        
+        request.setAttribute("pages", pages);
 
         HttpSession session = request.getSession();
         session.setAttribute("facs", facs);

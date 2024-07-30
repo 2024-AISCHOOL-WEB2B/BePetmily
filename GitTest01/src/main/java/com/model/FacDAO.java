@@ -85,7 +85,7 @@ public class FacDAO {
 				String facCategory = rs.getString("FAC_CATEGORY");
 				String facAddress = rs.getString("FAC_ADDRESS");
 				String facTel = rs.getString("FAC_TEL");
-				
+
 				FacDTO dto = new FacDTO(facId, facName, facLat, facLong, facCategory, facAddress, facTel);
 
 				facs.add(dto);
@@ -99,6 +99,34 @@ public class FacDAO {
 		}
 
 		return facs;
+	}
+
+	public int getTotal(String cate) {
+		int totalCnt = 0;
+
+		getConnection();
+
+		try {
+			String sql = "SELECT COUNT(*) AS CNT FROM FACILITY WHERE CATE = ?";
+
+			psmt = conn.prepareStatement(sql);
+
+			psmt.setString(1, cate);
+
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				totalCnt = rs.getInt("CNT");
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("sql 구문 오류");
+		}finally {
+			close();
+		}
+
+		return totalCnt;
 	}
 
 //	public ArrayList<Double> getDistance(ArrayList<FacDTO> facs, String latitude, String longitude) {
