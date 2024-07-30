@@ -84,19 +84,26 @@
                 </div>
                 <div class="album-grid" id="album-grid">
                     <div class="album-item">
-                        <img src="assets/img/album_back2.jpg" alt="앨범 이미지">
-                        <h1>강아지 제목</h1>
-                        <p>강아지 설명 및 상세 정보</p>
+                    	<a href="post_view.jsp">
+	                    	<img src="assets/img/album_back2.jpg" alt="앨범 이미지">
+	                        <h1>강아지 제목</h1>
+	                        <p>강아지 설명 및 상세 정보</p>
+                        </a>
+                        
                     </div>
                     <div class="album-item">
+                    <a href="post_view.jsp">
                         <img src="assets/img/album_back3.jpg" alt="앨범 이미지">
                         <h1>앨범 제목</h1>
                         <p>앨범 설명 및 상세 정보</p>
+                    </a>
                     </div>
                     <div class="album-item">
+                    <a href="post_view.jsp">
                         <img src="assets/img/album_back4.jpg" alt="앨범 이미지">
                         <h1>앨범 제목</h1>
                         <p>앨범 설명 및 상세 정보</p>
+                    </a>
                     </div>
                     <div class="album-item">
                         <img src="assets/img/album_back5.jpg" alt="앨범 이미지">

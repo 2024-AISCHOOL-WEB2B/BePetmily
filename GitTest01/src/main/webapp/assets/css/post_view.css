@@ -20,7 +20,7 @@
 
 .post-content {
     flex: 2;
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .post-content h1 {
@@ -33,33 +33,38 @@
     color: #555;
     margin-bottom: 20px;
 }
-
 .post-actions {
     display: flex;
     gap: 10px;
+   /* align-items: center;
+    justify-content: center; /* 버튼을 중앙에 정렬 */
+    margin-left:50px;
+    
 }
 
 .post-actions button {
-    padding: 10px 20px;
+    padding: 8px 8px;
     background-color: #FAE372;
     border: none;
     color: white;
-    font-size: 16px;
+    font-size: 10px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+    margin: 0 10px;
+    margin-top: 100px;
 }
 
 .post-actions .like-button {
-    background-color: #ff6b6b;
+    background-color: rgb(255, 179, 102);
 }
 
 .post-actions .edit-button {
-    background-color: #4caf50;
+    background-color:  #f8b400;
 }
 
 .post-actions .delete-button {
-    background-color: #f44336;
+    background-color: rgb(255, 140, 26);
 }
 
 .post-actions button:hover {

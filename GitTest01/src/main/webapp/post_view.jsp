@@ -71,15 +71,27 @@
         <main>
             <div class="post-view-container">
                 <div class="post-image">
-                    <img src="assets/img/sample_image.jpg" alt="Post Image">
+                    <img src="assets/img/album_back10.jpg" alt="Post Image">
                 </div>
                 <div class="post-content">
                     <h1 id="post-title">글 제목</h1>
                     <p id="post-body">글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    
                     <div class="post-actions">
-                        <button class="like-button">좋아요</button>
-                        <button class="edit-button">수정</button>
-                        <button class="delete-button">삭제</button>
+                    
+	                   
+                        <form action="#" method="POST">
+					        <button type="submit" name="action" value="like" class="button-like like-button">좋아요</button>
+					        <button type="submit" name="action" value="edit" class="button-like edit-button">수정</button>
+					        <button type="submit" name="action" value="delete" class="button-like delete-button">삭제</button>
+				   		</form>
                     </div>
                 </div>
             </div>
