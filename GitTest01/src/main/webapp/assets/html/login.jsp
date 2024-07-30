@@ -1,11 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원가입</title>
+    <title>제품 상세 페이지</title>
     <link rel="stylesheet" href="../css/Base_style.css">
-    <link rel="stylesheet" href="../css/sign_up.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body>
     <header>
@@ -56,7 +58,7 @@
         <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="main.html">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="../html/main.html">홈</a><span>&gt;</span></li>
                 <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li>
                 <li class="breadcrumb-item active" aria-current="page">사료</li> -->
             </ol>
@@ -70,48 +72,20 @@
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
         <main>
-            <div class="login-section">
-                <h1>회원가입</h1>
-                <p><span>BE PETMILY</span>에 가입하여 더 많은 혜택을 즐겨보세요!   </p>
-                <form>
-                    <div class="input-box-group">
-                        <div class="input-box">
-                            <i class="user-icon">&#128054;</i>
-                            <input type="text" id="username" name="username" placeholder="아이디">
-                            <button type="button" class="check-button">중복체크</button>
-                        </div>
-                        <div class="input-box">
-                            <i class="lock-icon">🔒</i>
-                            <input type="password" id="password" name="password" placeholder="비밀번호">
-                        </div>
-                    </div>
-                    <div class="input-box-group">
-                        <div class="input-box">
-                            <i class="user-icon">👤</i>
-                            <input type="text" id="name" name="name" placeholder="이름">
-                        </div>
-                        <div class="input-box">
-                            <i class="email-icon">📧</i>
-                            <input type="email" id="email" name="email" placeholder="이메일">
-                        </div>
-                        <div class="input-box">
-                            <i class="telecom-icon">📞</i>
-                            <select id="telecom" name="telecom">
-                                <option value="" disabled selected>통신사 선택</option>
-                                <option value="kt">KT</option>
-                                <option value="lg">LG</option>
-                                <option value="skt">SKT</option>
-                            </select>
-                        </div>
-                        <div class="input-box">
-                            <i class="phone-icon">📱</i>
-                            <input type="tel" id="phone" name="phone" placeholder="휴대전화번호">
-                        </div>
-                    </div>
-                    <button type="submit" class="register-button">BE PETMILY 회원가입</button>
-                </form>
+            <div class="login-container">
+                <h2><span>BE PETMILY</span>를 더 안전하고 편리하게 이용하세요</h2>
+                
+                <div>
+                    <input type="text" class="input-field" placeholder="아이디 입력해주세요">
+                    <input type="password" class="input-field" placeholder="비밀번호 입력해주세요">
+                </div>
+                    <button class="login-button">BE PETMILY 로그인</button>
+                <div class="link-container">
+                    <a href="#">아이디 찾기</a> | 
+                    <a href="#">비밀번호 찾기</a> | 
+                    <a href="sign_up.html">회원가입</a>
+                </div>
             </div>
-
 
 
         </main>
