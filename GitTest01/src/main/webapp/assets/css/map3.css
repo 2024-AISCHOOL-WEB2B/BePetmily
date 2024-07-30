@@ -41,5 +41,5 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    text-align: center; /* 항목 가운데 정렬 */
+    text-align: left;
 }
