@@ -80,7 +80,7 @@
         <main>
             <div class="container">
                 <div class="write-button-container">
-                    <a href="write_post.html" class="write-button">글쓰기</a>
+                    <a href="post.jsp" class="write-button">글쓰기</a>
                 </div>
                 <div class="album-grid" id="album-grid">
                     <div class="album-item">
