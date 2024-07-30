@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="assets/css/map3.css">
 </head>
 <body>
+	
+
     <header>
         <div class="logo">
-            <a href="main.jsp"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
+            <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
         
         <!-- 주 네비게이션 -->
@@ -24,9 +26,9 @@
                 <li class="dropdown products-tab">
                     <a>제품</a>
                     <div class="dropdown-content products-content">
-                        <a href="item_list.jsp?cate=food&page=1">사료</a>
-                        <a href="item_list.jsp?cate=snack&page=1">간식</a>
-                        <a href="item_list.jsp?cate=etc&page=1">용품</a>
+                        <a href="assets/html/item_list.html">사료</a>
+                        <a href="#">간식</a>
+                        <a href="#">용품</a>
                     </div>
                 </li>
                 <li class="dropdown facilities-tab">
@@ -43,13 +45,13 @@
                     <a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
                         <!-- <a href="HealthCare.html" class="moveable">건강관리</a> -->
-                        <a href="DiseasePrediction.jsp" class="moveable">질병예측</a>
+                        <a href="assets/html/DiseasePrediction.html" class="moveable">질병예측</a>
                     </div>
                 </li>
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="album_list.jsp">앨범게시판</a>
+                        <a href="assets/html/album_list.html">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -60,13 +62,13 @@
         <div class="breadcrumb-background"></div> <!-- 사각형 도형을 추가 -->
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="assets/html/main.html">홈</a><span>&gt;</span></li>
                 <!-- <li class="breadcrumb-item"><a href="item_list.html">제품</a><span>&gt;</span></li> -->
-                <li class="breadcrumb-item active" aria-current="page">지도</li> 
+                <li class="breadcrumb-item active" aria-current="page">주변위치</li> 
             </ol>
         </nav>
         <div class="user-options">
-            <a href="Mypage2.jsp"><img src="assets/img/Base_user.png" alt="User Icon"></a>
+            <a href="#"><img src="assets/img/Base_user.png" alt="User Icon"></a>
             <a href="#"><img src="assets/img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
@@ -78,21 +80,39 @@
                 <div id="map" style="width:600px;height:400px;"></div>
                 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d65efe482352843c1373a29f486cdb0f"></script>
                 <script type="text/javascript" src="assets/js/geolocation.js"></script> 
+                
+                
                 <div class="location-list">
                 <%
-                ArrayList<FacDTO> facs = (ArrayList<FacDTO>) request.getAttribute("facs");
-                if (facs != null) {
-                    for (FacDTO fac : facs) {
-                        out.println("JSP에서 시설 이름: " + fac.getFacName() + "<br>");
-                    }
-                } else {
-                    out.println("시설을 찾을 수 없습니다.<br>");
-                }
-                %>
-                   <!--<h2>가까운 장소</h2>  --> 
+                String cate = request.getParameter("cate");
+                                
+                FacDAO dao = new FacDAO();
+                ArrayList<FacDTO> facs = (ArrayList<FacDTO>)session.getAttribute("facs");
+                /* ArrayList<Double> distances = (ArrayList<Double>)session.getAttribute("distances"); */
+				%>
+                   <!--<h2>가까운 장소</h2>  --> 	
                     <ul id="places-list">
                         <!-- 가까운 장소 목록이 여기에 추가됩니다 -->
-                        
+                        <%if ( facs != null){
+                        	for (FacDTO fac : facs) {%>
+                        	<li>
+                        		<strong>건물 이름:</strong><%= fac.getFacName() %> <br>
+                        		<strong>주소:</strong> <%= fac.getFacAddress() %><br>
+                        		<strong>전화번호:</strong><%= fac.getFacTel() %> <br>
+                        	<% } %>
+                        	</li>
+            	        <% }else {
+						    out.println("시설을 찾을 수 없습니다.<br>");
+						}%>                        	
+<%--                         <%if ( distances != null){						<!--거리 계산 다시하기 -->
+	                       	for (Double distance : distances){%>
+	                       	<li>
+	                       		<strong>거리:</strong> <%= distance %> km
+	                       	</li>
+	                        <%}%>
+                        <%}else {
+						    out.println("시설을 찾을 수 없습니다.<br>");
+						}%> --%>
                     </ul>
                 </div>
             </section>
@@ -114,9 +134,9 @@
                 <div class="footer-links">
                     <h3>제품</h3>
                     <ul>
-                        <li><a href="item_list.jsp?cate=food&page=1">사료</a></li>
-                        <li><a href="item_list.jsp?cate=snack&page=1">간식</a></li>
-                        <li><a href="item_list.jsp?cate=etc&page=1">용품</a></li>
+                        <li><a href="assets/html/item_list.html">사료</a></li>
+                        <li><a href="#">간식</a></li>
+                        <li><a href="#">용품</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -133,14 +153,14 @@
                     <h3>맞춤형 정보</h3>
                     <ul>
                         <!-- <li><a href="HealthCare.html">건강관리</a></li> -->
-                        <li><a href="DiseasePrediction.jsp">질병예측</a></li>
+                        <li><a href="assets/html/DiseasePrediction.html">질병예측</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="album_list.jsp">앨범게시판</a></li>
+                        <li><a href="assets/html/album_list.html">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>
@@ -161,4 +181,3 @@
         </div>
     </footer>
 </body>
-</html>
