@@ -1,22 +1,10 @@
-/* 
-@font-face {
-    font-family: 'Ownglyph_ryurue-Rg';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryurue-Rg.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-*/
-@import url("https://fonts.googleapis.com/css2?family=Gaegu&display=swap");  
-
- 
 body {
-    font-family: 'Gaegu','Arial', 'sans-serif' ;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 18px;
 }
 
 .wrapper {
@@ -49,7 +37,15 @@ hr {
     border-top: 1px solid #ddd;
     margin: 10px 0;
 }
-
+.breadcrumb-background {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #FAE372;
+    top: 300px;
+    left: 0;
+    z-index: 1;
+}
 .breadcrumb {
     padding: 0px 15px;
     background-color: #f8f9fa;
@@ -60,7 +56,6 @@ hr {
     align-items: center;
     margin: 0px;
     z-index: 1;
-    font-size: 18px;
 }
 
 .breadcrumb-item {
@@ -89,7 +84,7 @@ hr {
     width: 100%;
     height: 50px;
     background-color: #FAE372;
-    top: 205px;
+    top: 200px;
     left: 0;
     z-index: 0;
 }
@@ -124,7 +119,7 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 21px;
+    font-size: 18px;
     padding: 10px 60px;
 }
 

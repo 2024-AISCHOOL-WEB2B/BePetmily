@@ -120,6 +120,15 @@ header {
     margin-left: -650px;
     z-index: 1;
 }
+.breadcrumb-background {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background-color: #FAE372;
+    top: 200px;
+    left: 0;
+    z-index: 0;
+}
 
 /* 메인 컨테이너 */
 .main-container {
