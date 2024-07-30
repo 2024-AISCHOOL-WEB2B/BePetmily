@@ -1,3 +1,4 @@
+<%@page import="com.model.userDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
@@ -64,7 +65,9 @@
             <a href="#"><img src="assets/img/Base_cart.png" alt="Cart Icon"></a>
         </div>
     </header>
-
+	<%
+		userDTO info = (userDTO)session.getAttribute("info");
+	%>
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
         <main>
@@ -75,11 +78,19 @@
                 <div class="right-section">
                     <div class="banner-text">
                         <h2 class=""><span class="BP">BE PETMILY</span>를  <hr>안전하고 편리하게 이용하세요</h2>
-                        <button><a href="login.jsp">BE PETMILY 로그인</a></button>
-                        <div class="login">
-                            <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a> | <a href="sign_up.jsp">회원가입</a>
-                        </div>
-                    </div>
+	            		<% if (info == null) { %>
+	                    <button><a href="login.jsp">BE PETMILY 로그인</a></button>
+	                    <div class="login">
+	                        <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a> | <a href="sign_up.jsp">회원가입</a>
+	                    </div>
+						<% }else { %>
+					<!-- 로그인 안했을때는 아래 로그인이 -->		
+	                    <button><a href="LogoutService">BE PETMILY 로그아웃</a></button>
+	                    <div class="login">
+	<!--                         <a href="#">아이디 찾기</a> | <a href="#">비밀번호 찾기</a> | <a href="sign_up.jsp">회원가입</a> -->
+	                    </div>
+						<% } %>
+					</div>
                     <hr>
                     <div class="banner-text-bottom">
                         <button class="register-button">동물 등록번호 등록하기</button>

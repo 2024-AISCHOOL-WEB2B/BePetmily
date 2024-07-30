@@ -75,7 +75,7 @@
             <div class="login-section">
                 <h1>회원가입</h1>
                 <p><span>BE PETMILY</span>에 가입하여 더 많은 혜택을 즐겨보세요!   </p>
-                <form>
+                <form action="JoinService">
                     <div class="input-box-group">
                         <div class="input-box">
                             <i class="user-icon">&#128054;</i>

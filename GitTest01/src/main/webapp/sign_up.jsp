@@ -76,16 +76,16 @@
             <div class="login-section">
                 <h1>회원가입</h1>
                 <p><span>BE PETMILY</span>에 가입하여 더 많은 혜택을 즐겨보세요!   </p>
-                <form>
+                <form action="JoinService" method="post">
                     <div class="input-box-group">
                         <div class="input-box">
                             <i class="user-icon">&#128054;</i>
-                            <input type="text" id="username" name="username" placeholder="아이디">
+                            <input type="text" id="username" name="id" placeholder="아이디">
                             <button type="button" class="check-button">중복체크</button>
                         </div>
                         <div class="input-box">
                             <i class="lock-icon">🔒</i>
-                            <input type="password" id="password" name="password" placeholder="비밀번호">
+                            <input type="password" id="password" name="pw" placeholder="비밀번호">
                         </div>
                     </div>
                     <div class="input-box-group">

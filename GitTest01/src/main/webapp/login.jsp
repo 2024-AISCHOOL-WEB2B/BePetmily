@@ -1,3 +1,4 @@
+<%@page import="com.model.userDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -72,20 +73,22 @@
     <!-- Wrapper: 메인 콘텐츠 및 푸터를 중앙에 배치 -->
     <div class="wrapper">
         <main>
+        <form action="LoginService" method="post">
             <div class="login-container">
                 <h2><span>BE PETMILY</span>를 더 안전하고 편리하게 이용하세요</h2>
                 
                 <div>
-                    <input type="text" class="input-field" placeholder="아이디 입력해주세요">
-                    <input type="password" class="input-field" placeholder="비밀번호 입력해주세요">
+                    <input type="text" name="id" class="input-field" placeholder="아이디 입력해주세요">
+                    <input type="password" name="pw" class="input-field" placeholder="비밀번호 입력해주세요">
                 </div>
-                    <button class="login-button">BE PETMILY 로그인</button>
+                    <button class="login-button" type="submit">BE PETMILY 로그인</button>
                 <div class="link-container">
                     <a href="#">아이디 찾기</a> | 
                     <a href="#">비밀번호 찾기</a> | 
                     <a href="sign_up.jsp">회원가입</a>
                 </div>
             </div>
+        </form>
         </main>
     </div>
     <!-- 배너: 전체 너비로 설정 -->
