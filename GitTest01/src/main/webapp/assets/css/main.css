@@ -30,6 +30,9 @@
     font-size: 14px;
     text-decoration: none;
 }
+.banner-text a{       /*로그인 화면 언더라인 삭제 기능*/
+    text-decoration: none; 
+}
 
 .banner-text button {
     width: 90%;
@@ -42,6 +45,8 @@
     font-weight: bold;
     border-radius: 5px;
     height: 70px;
+    text-decoration: none;
+    
 }
 
 .banner-text button:hover {
@@ -59,6 +64,7 @@
     height: 70px;
     text-decoration: none;
     font-weight: bold;
+    
 }
 
 .register-button:hover {
@@ -70,6 +76,7 @@
     margin-left: 40px;
     margin-right: 40px;
     margin-bottom: 50px;
+
 }
 
 .BP {
@@ -165,7 +172,7 @@
 
 .left-section img {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .right-section {
