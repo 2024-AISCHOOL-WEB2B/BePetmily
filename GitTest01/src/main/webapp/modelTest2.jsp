@@ -32,6 +32,13 @@
             border: 1px solid #ccc;
             width: 98%;
         }
+        #selected-symptoms ul {
+            list-style-type: none; /* 불릿 스타일 제거 */
+            padding: 0;
+        }
+        #selected-symptoms li {
+            margin: 5px 0;
+        }
         /* 토글 스위치 스타일 */
         .toggle-switch {
             position: relative;
