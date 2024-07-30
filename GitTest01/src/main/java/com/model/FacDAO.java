@@ -59,10 +59,14 @@ public class FacDAO {
 
 		try {
 			String sql = "SELECT * FROM (SELECT FACILITY.*, "
-					+ "(6371 * acos(cos(? * (3.141592653589793 / 180)) * cos(FAC_LAT * (3.141592653589793 / 180)) * "
-					+ "cos((FAC_LONG - ?) * (3.141592653589793 / 180)) + sin(? * (3.141592653589793 / 180)) * "
-					+ "sin(FAC_LAT * (3.141592653589793 / 180)))) AS distance " + "FROM FACILITY "
-					+ "WHERE FAC_CATEGORY IN (?)) DATA WHERE DATA.distance < 5";
+			           + "(6371 * acos(cos(? * (3.141592653589793 / 180)) * cos(FAC_LAT * (3.141592653589793 / 180)) * "
+			           + "cos((FAC_LONG - ?) * (3.141592653589793 / 180)) + sin(? * (3.141592653589793 / 180)) * "
+			           + "sin(FAC_LAT * (3.141592653589793 / 180)))) AS distance "
+			           + "FROM FACILITY "
+			           + "WHERE FAC_CATEGORY IN (?)) DATA "
+			           + "WHERE DATA.distance < 5 "
+			           + "AND ROWNUM <= 8";
+			
 
 			psmt = conn.prepareStatement(sql);
 
@@ -107,7 +111,7 @@ public class FacDAO {
 		getConnection();
 
 		try {
-			String sql = "SELECT COUNT(*) AS CNT FROM FACILITY WHERE CATE = ?";
+			String sql = "SELECT COUNT(*) AS CNT FROM FACILITY WHERE FAC_CATEGORY = ?";
 
 			psmt = conn.prepareStatement(sql);
 

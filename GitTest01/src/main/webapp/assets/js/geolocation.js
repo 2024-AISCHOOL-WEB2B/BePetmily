@@ -16,6 +16,7 @@ function showPosition(position) {
     var lat = position.coords.latitude;
     var lon = position.coords.longitude;
     var cate = getQueryParam('cate'); // URL에서 'cate' 파라미터를 추출
+    var page = getQueryParam('page'); // URL에서 'page' 파라미터를 추출
 
     // 카카오 지도 API를 이용해 지도 생성 및 마커 추가
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
@@ -39,7 +40,7 @@ function showPosition(position) {
     infowindow.open(map, marker);
 
     // 위치 정보를 서버로 전송
-    sendPosition(lat, lon, cate); // cate를 함께 전송
+    sendPosition(lat, lon, cate, page); // cate를 함께 전송
 }
 
 function showError(error) {
@@ -59,21 +60,18 @@ function showError(error) {
     }
 }
 
-function sendPosition(lat, lon, cate) {
+function sendPosition(lat, lon, cate, page) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "FacLocation", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4 && xhr.status == 200) {
             // 요청이 성공하면 할 일
-            
-            var places = JSON.parse(xhr.responseText);
-            updatePlacesList(places);
-
         }
     };
     // cate 파라미터를 포함하여 데이터 전송
-    xhr.send("latitude=" + encodeURIComponent(lat) + "&longitude=" + encodeURIComponent(lon) + "&cate=" + encodeURIComponent(cate));
+    xhr.send("latitude=" + encodeURIComponent(lat) + "&longitude=" + encodeURIComponent(lon) + "&cate=" + encodeURIComponent(cate)
+    + "&page=" + encodeURIComponent(page));
 }
 
 function updatePlacesList(places) {

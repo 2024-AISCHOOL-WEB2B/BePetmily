@@ -1,3 +1,4 @@
+<%@page import="com.model.PageDTO"%>
 <%@page import="com.model.FacDAO"%>
 <%@page import="com.model.FacDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -16,7 +17,7 @@
 
     <header>
         <div class="logo">
-            <a href="main.html"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
+            <a href="main.jsp"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
         </div>
         
         <!-- 주 네비게이션 -->
@@ -26,9 +27,9 @@
                 <li class="dropdown products-tab">
                     <a>제품</a>
                     <div class="dropdown-content products-content">
-                        <a href="assets/html/item_list.html">사료</a>
-                        <a href="#">간식</a>
-                        <a href="#">용품</a>
+                        <a href="item_list.jsp?cate=food&page=1">사료</a>
+                        <a href="item_list.jsp?cate=snack&page=1">간식</a>
+                        <a href="item_list.jsp?cate=etc&page=1">용품</a>
                     </div>
                 </li>
                 <li class="dropdown facilities-tab">
@@ -45,13 +46,13 @@
                     <a>맞춤형 정보</a>
                     <div class="dropdown-content health-content">
                         <!-- <a href="HealthCare.html" class="moveable">건강관리</a> -->
-                        <a href="assets/html/DiseasePrediction.html" class="moveable">질병예측</a>
+                        <a href="DiseasePrediction.jsp" class="moveable">질병예측</a>
                     </div>
                 </li>
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="assets/html/album_list.html">앨범게시판</a>
+                        <a href="album_list.jsp">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -85,10 +86,16 @@
                 <div class="location-list">
                 <%
                 String cate = request.getParameter("cate");
-                                
+                String pageS = request.getParameter("page");
+                int curPage = (pageS != null) ? Integer.parseInt(pageS) : 1;
+                
                 FacDAO dao = new FacDAO();
                 ArrayList<FacDTO> facs = (ArrayList<FacDTO>)session.getAttribute("facs");
+                PageDTO pages = (PageDTO) session.getAttribute("pages"); 
                 /* ArrayList<Double> distances = (ArrayList<Double>)session.getAttribute("distances"); */
+                if (pages == null) {
+                	pages = new PageDTO(curPage, 8, dao.getTotal(cate)); // 현재 페이지를 기준으로 PageDTO를 생성합니다.
+                }
 				%>
                    <!--<h2>가까운 장소</h2>  --> 	
                     <ul id="places-list">
@@ -116,6 +123,13 @@
                     </ul>
                 </div>
             </section>
+           	<div class="pagination">
+                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() - 1 %>" class="prev-page">&laquo;</a>
+                <% for (int i = pages.getStartPage(); i <= pages.getEndPage(); i++) { %>
+                    <a href="item_list.jsp?cate=<%=cate%>&page=<%= i %>" class="page-number"><%= i %></a>
+                <% } %>
+                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() + 1 %>" class="next-page">&raquo;</a>                
+            </div>
         </main>
     </div>        
 
@@ -134,9 +148,9 @@
                 <div class="footer-links">
                     <h3>제품</h3>
                     <ul>
-                        <li><a href="assets/html/item_list.html">사료</a></li>
-                        <li><a href="#">간식</a></li>
-                        <li><a href="#">용품</a></li>
+                        <li><a href="item_list.jsp?cate=food&page=1">사료</a></li>
+                        <li><a href="item_list.jsp?cate=snack&page=1">간식</a></li>
+                        <li><a href="item_list.jsp?cate=etc&page=1">용품</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -153,14 +167,14 @@
                     <h3>맞춤형 정보</h3>
                     <ul>
                         <!-- <li><a href="HealthCare.html">건강관리</a></li> -->
-                        <li><a href="assets/html/DiseasePrediction.html">질병예측</a></li>
+                        <li><a href="DiseasePrediction.jsp">질병예측</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="assets/html/album_list.html">앨범게시판</a></li>
+                        <li><a href="album_list.jsp">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>
@@ -180,4 +194,12 @@
             </div>
         </div>
     </footer>
+    
+        <script>
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    </script>
 </body>
+</html>
