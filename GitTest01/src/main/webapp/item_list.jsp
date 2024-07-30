@@ -9,8 +9,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>제품 리스트 페이지</title>
-<link rel="stylesheet" href="assets/css/Base_style.css?v=1.0">
-<link rel="stylesheet" href="assets/css/item_list.css?v=1.0">
+<link rel="stylesheet" href="assets/css/Base_style.css??v1.1">
+<link rel="stylesheet" href="assets/css/item_list.css??v1.1">
 </head>
 <body>
     <header>

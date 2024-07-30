@@ -11,7 +11,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <title>be petMily🐾🐾</title>
-<link rel="stylesheet" type="text/css" href="pp.css">
+<link rel="stylesheet" type="text/css" href="pp.css?v1.1">
 </head>
 <body
 	style="background-image: url('assets/img/Unicode_bg.jpg'); background-size: cover;">

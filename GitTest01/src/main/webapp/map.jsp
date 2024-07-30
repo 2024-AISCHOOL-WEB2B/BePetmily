@@ -9,8 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사용자 위치 기반 서비스</title>
-    <link rel="stylesheet" href="assets/css/Base_style.css">
-    <link rel="stylesheet" href="assets/css/map3.css">
+    <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
+    <link rel="stylesheet" href="assets/css/map3.css?v1.1">
 </head>
 <body>
 	

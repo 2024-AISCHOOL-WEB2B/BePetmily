@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href="assets/css/Base_style.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
+    <link rel="stylesheet" href="assets/css/login.css?v1.1">
 </head>
 <body>
     <header>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>질병 예측</title>
-    <link rel="stylesheet" href="assets/css/Base_style.css">
-    <link rel="stylesheet" href="assets/css/DiseasePrediction.css">
+    <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
+    <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.1">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
