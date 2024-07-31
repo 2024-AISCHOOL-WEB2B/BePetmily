@@ -86,15 +86,14 @@
                         %>
                             <div class="info-text"><h1>질병 이름</h1></div>
                             <form action="DiseasePredict" method="post" onsubmit="copyPContentToHiddenInput()">
-                            
-	                            <p id="result">	      
-			                        <%if (disease != null){ %>                      
-		                            	<%= disease.getDisName() %> 
-		                            <% } %>
-	                            </p>
-	                            <input type="hidden" id="hiddenInput" name="disName">
-	                            <input type="submit" value="질병 정보 확인">                            
-                            </form>
+							   <p id="result">
+							       <% if (disease != null) { %>
+							           <%= disease.getDisName() %>
+							       <% } %>
+							   </p>
+							   <input type="hidden" id="hiddenInput" name="disName">
+							   <img src="assets/img/predict_01.png" alt="질병 정보 확인" onclick="submitForm("") style=" width:25px; height:25px;">정보 확인
+							</form>
                         </div>
                         <div class="info-box large">
 
@@ -190,5 +189,17 @@
             </div>
         </div>
     </footer>
+    
+	    <script>
+		    function submitForm() {
+		        document.querySelector('form').submit();
+		    }
+		    
+		    function copyPContentToHiddenInput() {
+		        const resultText = document.getElementById('result').innerText;
+		        document.getElementById('hiddenInput').value = resultText;
+		    }
+		</script>
+
 </body>
 </html>
