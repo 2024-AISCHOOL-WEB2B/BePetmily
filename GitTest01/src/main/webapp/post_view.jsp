@@ -88,12 +88,10 @@
                 </div>
                 <div class="post-actions">
                     <button type="submit" name="retrun" value="retrun" class="button-retrun retrun-button"><img src="assets/img/return.png"></button>
-                    <div class="post-button-con">
-                        <button type="submit" name="action" value="like" class="button-like like-button"><img src="assets/img/good.png"></button>
-                    </div>
                     <div class="post-button-container">
-                        <button type="submit" name="action" value="edit" class="button-like edit-button" ><img src="<%= request.getContextPath() %>/img/dog1.avif">수정</button>
-                        <button type="submit" name="action" value="delete" class="button-like delete-button"><img src="<%= request.getContextPath() %>/img/dog2.avif">삭제</button>
+                        <button type="submit" name="action" value="like" class="button-like like-button"><img src="assets/img/good.png">좋아요</button>
+                        <button type="submit" name="action" value="edit" class="button-like edit-button" ><img src="assets/img/dog1.avif">수정</button>
+                        <button type="submit" name="action" value="delete" class="button-like delete-button"><img src="assets/img/dog2.avif">삭제</button>
                     </div>
                 </div>
             </div>

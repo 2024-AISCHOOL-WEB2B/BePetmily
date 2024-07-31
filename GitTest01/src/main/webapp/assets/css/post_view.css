@@ -93,18 +93,4 @@
  
 }
 
-.post-button-con{ /*좋아요 버튼 글자 조절*/
-    display: flex;
-    align-items: center;
-    font-family: 'Gaegu', 'Arial', 'sans-serif';
 
-}
-
-.post-button-con img{ /*좋아요 이미지 크기 조절*/
-    max-width: 100%;
-    border-radius: 10px;
-    width: 30px;
-    height: 30px;
-    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너에 맞게 자르기 */
-    background-color: #f7dfdf;
-}
