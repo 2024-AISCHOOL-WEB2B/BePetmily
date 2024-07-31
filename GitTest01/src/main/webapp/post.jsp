@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제품 상세 페이지</title>
-    <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
-    <link rel="stylesheet" href="assets/css/post2.css?v1.1">
+    <link rel="stylesheet" href="assets/css/Base_style.css">
+    <link rel="stylesheet" href="assets/css/post2.css">
 </head>
 <body>
     <header>
@@ -46,7 +46,7 @@
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="album_list.jsp">앨범게시판</a>
+                        <a href="postList">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -72,10 +72,9 @@
     <div class="wrapper">
         <main>
         <div class="container1">
-            <form>
                 <div class="container">
                     <h1>글쓰기</h1>
-                    <form action="uploadServlet" method="post" enctype="multipart/form-data">
+                    <form action="UploadphotoServlet" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="title">글쓰기</label>
                             <input type="text" id="title" name="title" required>
@@ -93,8 +92,7 @@
                         </div>
                     </form>
                 </div>
-                
-            </form>    
+                   
        </div>
         </main>
     </div>

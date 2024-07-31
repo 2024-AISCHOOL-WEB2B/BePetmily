@@ -29,6 +29,7 @@ public class LoginService extends HttpServlet {
 			System.out.println("로그인 성공");
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
+			session.setAttribute("login_id", info.getId()); // 게시판 등록시 사용자 id사용하기위한 세션 키값 추가
 		} else {
 			System.out.println("로그인 실패");
 		}

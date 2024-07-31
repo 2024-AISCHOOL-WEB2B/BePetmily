@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%> 
+<%@ page import="com.model.MemberDTO" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>앨범 게시판</title>
-    <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
-    <link rel="stylesheet" href="assets/css/album_list2.css?v1.1">
+    <link rel="stylesheet" href="assets/css/Base_style.css">
+    <link rel="stylesheet" href="assets/css/album_list2.css">
 </head>
 <body>
     <header>
@@ -47,7 +49,7 @@
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="album_list.jsp">앨범게시판</a>
+                        <a href="postList">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -83,27 +85,53 @@
                     <a href="post.jsp" class="write-button">글쓰기</a>
                 </div>
                 <div class="album-grid" id="album-grid">
+                
+                
+                
+                
+                
+                
+                
+                
+                <% 
+                    List<MemberDTO> posts = (List<MemberDTO>) request.getAttribute("posts");
+                    if (posts != null && !posts.isEmpty()) {
+                        for (MemberDTO post : posts) {
+                %>
                     <div class="album-item">
-                    	<a href="post_view.jsp">
-	                    	<img src="assets/img/album_back2.jpg" alt="앨범 이미지">
-	                        <h1>강아지 제목</h1>
-	                        <p>강아지 설명 및 상세 정보</p>
-                        </a>
-                        
+                    
+                    <% if (post.getImgFile() != null && !post.getImgFile().isEmpty()) { %>
+                        <img src="<%= post.getImgFile() %>" alt="앨범 이미지">
+                         <% } %>
+                        <h1><%= post.getTitle() %></h1>
+                        <p><%= post.getContent() %></p>
+                    </div>
+                    
+                <% 
+                        }
+                    } else {
+                %>
+                    <tr>
+                        <td colspan="6" class="no-data">게시물이 없습니다.</td>
+                    </tr>
+                <% } %>
+                
+    
+                <!-- 
+                    <div class="album-item">
+                        <img src="assets/img/album_back2.jpg" alt="앨범 이미지">
+                        <h1>강아지 제목</h1>
+                        <p>강아지 설명 및 상세 정보</p>
                     </div>
                     <div class="album-item">
-                    <a href="post_view.jsp">
                         <img src="assets/img/album_back3.jpg" alt="앨범 이미지">
                         <h1>앨범 제목</h1>
                         <p>앨범 설명 및 상세 정보</p>
-                    </a>
                     </div>
                     <div class="album-item">
-                    <a href="post_view.jsp">
                         <img src="assets/img/album_back4.jpg" alt="앨범 이미지">
                         <h1>앨범 제목</h1>
                         <p>앨범 설명 및 상세 정보</p>
-                    </a>
                     </div>
                     <div class="album-item">
                         <img src="assets/img/album_back5.jpg" alt="앨범 이미지">
@@ -135,6 +163,10 @@
                         <h1>앨범 제목</h1>
                         <p>앨범 설명 및 상세 정보</p>
                     </div>
+                    
+                    -->
+                    
+                    
                     
                 </div>
                 
@@ -204,7 +236,7 @@
                     <h3>커뮤니티</h3>
                     <ul>
                         <!-- <li><a href="#">자주 묻는 질문</a></li> -->
-                        <li><a href="album_list.jsp">앨범게시판</a></li>
+                        <li><a href="postList">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>
