@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>글 보기</title>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
-    <link rel="stylesheet" href="assets/css/post_view.css?v1.1">
+    <link rel="stylesheet" href="assets/css/post_view.css?v1.2">
 </head>
 <body>
     <header>
