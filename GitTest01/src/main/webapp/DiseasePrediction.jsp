@@ -13,7 +13,7 @@
         }
     </script>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
-    <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.1">
+    <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.2">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -100,15 +100,19 @@
 
                         
                         <h2>질병 정보</h2>
+                        	<p>
                         	<%if (disease != null){ %>
-                            	<p><%= disease.getDisInfo() %> </p>
+                            	<%= disease.getDisInfo() %> 
                             <% } %>
+                            </p>
                         </div>
                         <div class="info-box large2">
                         <h2>관리 방법</h2>
+                        	<p>
                         	<%if (disease != null){ %>
-                            	<p><%= disease.getDisTreat() %> </p>
+                            	<%= disease.getDisTreat() %> 
                             <% } %>
+                            </p>
                         </div>
                         
                         

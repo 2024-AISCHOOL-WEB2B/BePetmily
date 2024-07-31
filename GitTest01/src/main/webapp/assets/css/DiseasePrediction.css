@@ -150,3 +150,10 @@ header {
 
 .right-content {
 }
+
+.info-box h2 {
+	margin-top:50px;
+}
+#result {
+margin-left:25px;
+	}
