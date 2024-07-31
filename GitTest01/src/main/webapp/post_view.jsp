@@ -44,7 +44,7 @@
                 <li class="dropdown community-tab">
                     <a>커뮤니티</a>
                     <div class="dropdown-content community-content">
-                        <a href="album_list.jsp">앨범게시판</a>
+                        <a href="postList">앨범게시판</a>
                     </div>
                 </li>
             </ul>
@@ -56,7 +56,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
-                <li class="breadcrumb-item"><a href="album_list.jsp">앨범게시판</a><span>&gt;</span></li>
+                <li class="breadcrumb-item"><a href="postList">앨범게시판</a><span>&gt;</span></li>
                 <li class="breadcrumb-item active" aria-current="page">글 보기</li> 
             </ol>
         </nav>
@@ -135,7 +135,7 @@
                 <div class="footer-links">
                     <h3>커뮤니티</h3>
                     <ul>
-                        <li><a href="album_list.jsp">앨범게시판</a></li>
+                        <li><a href="postList">앨범게시판</a></li>
                     </ul>   
                 </div>
             </div>
