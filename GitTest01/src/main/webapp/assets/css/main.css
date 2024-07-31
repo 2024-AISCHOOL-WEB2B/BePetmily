@@ -32,9 +32,8 @@
 }
 .banner-text a{       /*로그인 화면 언더라인 삭제 기능*/
     text-decoration: none; 
-     border: none;
+    border: none;
     color: #030303;
-}
 
 .banner-text button {
     width: 90%;
@@ -188,4 +187,4 @@
 }
 
 /* 추가된 스타일 */
-
+}
