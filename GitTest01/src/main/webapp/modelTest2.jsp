@@ -264,7 +264,7 @@
                     var message; // 출력할 메시지를 저장할 변수
                     switch (response.disease){
                     	case 'Tick fever':
-                    		message = '진드기 열병';
+                    		message = '진드기 열';
                     		break;
                     	case 'Distemper':
                     		message = '홍역';
@@ -304,7 +304,7 @@
                     		break;
                     }
                     
-                    $('#result').html('예측된 질병: ' + message);
+                    $('#result').html(message);
                 },
                 error: function(xhr, status, error) {
                     $('#result').html('오류 발생: ' + error);
