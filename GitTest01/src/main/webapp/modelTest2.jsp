@@ -197,7 +197,7 @@
         <ul id="symptom-list"></ul>
     </div>
     
-    <div id="result"></div>
+    
 
     <script>
     $(document).ready(function() {
@@ -261,7 +261,50 @@
                 contentType: 'application/json',
                 data: JSON.stringify(symptomsData),
                 success: function(response) {
-                    $('#result').html('예측된 질병: ' + response.disease);
+                    var message; // 출력할 메시지를 저장할 변수
+                    switch (response.disease){
+                    	case 'Tick fever':
+                    		message = '진드기 열병';
+                    		break;
+                    	case 'Distemper':
+                    		message = '홍역';
+                    		break;
+                    	case 'Parvovirus':
+                    		message = '파보바이러스';
+                    		break;
+                    	case 'Hepatitis':
+                    		message = '간염';
+                    		break;
+                    	case 'Tetanus':
+                    		message = '파상풍';
+                    		break;
+                    	case 'Chronic kidney Disease':
+                    		message = '만성 신장 질환';
+                    		break;
+                    	case 'Diabetes':
+                    		message = '당뇨병';
+                    		break;
+                    	case 'Gastrointestinal Disease':
+                    		message = '소화기 질환';
+                    		break;
+                    	case 'Allergies':
+                    		message = '알레르기';
+                    		break;
+                    	case 'Gingitivis':
+                    		message = '치은염';
+                    		break;
+                    	case 'Cancers':
+                    		message = '암';
+                    		break;
+                    	case 'Skin Rashes':
+                    		message = '피부 발진';
+                    		break;
+                    	default :
+                    		message = response.disease;
+                    		break;
+                    }
+                    
+                    $('#result').html('예측된 질병: ' + message);
                 },
                 error: function(xhr, status, error) {
                     $('#result').html('오류 발생: ' + error);
