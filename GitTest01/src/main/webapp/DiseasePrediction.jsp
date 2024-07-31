@@ -1,3 +1,4 @@
+<%@page import="com.model.DisDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
@@ -5,6 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>질병 예측</title>
+    <script>
+        function copyPContentToHiddenInput() {
+            var pContent = document.getElementById("result").innerText;
+            document.getElementById("hiddenInput").value = pContent;
+        }
+    </script>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
     <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.1">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -74,22 +81,34 @@
                 <section class="custom-info">
                     <div class="info-container">
                         <div class="info-box small">
+                        <%
+                        	DisDTO disease = (DisDTO) session.getAttribute("disease");
+                        %>
                             <div class="info-text"><h1>질병 이름</h1></div>
-                            <p id="result"></p>
+                            <form action="DiseasePredict" method="post" onsubmit="copyPContentToHiddenInput()">
+                            
+	                            <p id="result">	      
+			                        <%if (disease != null){ %>                      
+		                            	<%= disease.getDisName() %> 
+		                            <% } %>
+	                            </p>
+	                            <input type="hidden" id="hiddenInput" name="disName">
+	                            <input type="submit" value="질병 정보 확인">                            
+                            </form>
                         </div>
                         <div class="info-box large">
-                        <h2>건강정보</h2>
-                            <p>강아지의 무릎에는 동그랗고 작은 뼈인 슬개골이 있다.
-                            본래 슬개골은 깊게 파인 활차구 홈 안에 들어가서 무릎 관절이 움직이도록 도와주는 역할을 하지만,
-                            슬개골이 본래의 위치에서 벗어날 수 있다. 
-                            이러한 상태를 강아지 슬개골 탈구라고 부른다. </p>
+
+                        
+                        <h2>질병 정보</h2>
+                        	<%if (disease != null){ %>
+                            	<p><%= disease.getDisInfo() %> </p>
+                            <% } %>
                         </div>
                         <div class="info-box large2">
-                        <h2>건강식품/활동</h2>
-                            <p>강아지의 무릎에는 동그랗고 작은 뼈인 슬개골이 있다.
-                            본래 슬개골은 깊게 파인 활차구 홈 안에 들어가서 무릎 관절이 움직이도록 도와주는 역할을 하지만,
-                            슬개골이 본래의 위치에서 벗어날 수 있다. 
-                            이러한 상태를 강아지 슬개골 탈구라고 부른다. </p>
+                        <h2>관리 방법</h2>
+                        	<%if (disease != null){ %>
+                            	<p><%= disease.getDisTreat() %> </p>
+                            <% } %>
                         </div>
                         
                         
@@ -104,9 +123,9 @@
                         <div class="info-box small">
                             <div class="info-image"></div>
                             <div class="info-text">제품 정보</div>
-                         --> 
+                          
                          
-                        </div>   
+                        </div>   -->
                     </div>
                 </section>
             </div>
