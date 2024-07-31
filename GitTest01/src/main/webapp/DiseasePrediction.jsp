@@ -75,7 +75,7 @@
                     <div class="info-container">
                         <div class="info-box small">
                             <div class="info-text"><h1>질병 이름</h1></div>
-                            <p>슬개골 탈구</p>
+                            <p id="result"></p>
                         </div>
                         <div class="info-box large">
                         <h2>건강정보</h2>
