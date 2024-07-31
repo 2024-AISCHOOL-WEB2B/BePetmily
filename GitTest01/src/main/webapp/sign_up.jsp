@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
-    <link rel="stylesheet" href="assets/css/sign_up.css?v1.1">
+    <link rel="stylesheet" href="assets/css/sign_up2.css?v1.1">
 </head>
 <body>
     <header>
