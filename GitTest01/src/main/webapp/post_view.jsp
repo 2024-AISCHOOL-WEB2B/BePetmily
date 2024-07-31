@@ -57,7 +57,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="main.jsp">홈</a><span>&gt;</span></li>
                 <li class="breadcrumb-item"><a href="postList">앨범게시판</a><span>&gt;</span></li>
-                <li class="breadcrumb-item active" aria-current="page">글 보기</li> 
+                <li class="breadcrumb-item active" aria-current="page">글</li> 
             </ol>
         </nav>
         <div class="user-options">
@@ -70,34 +70,36 @@
     <div class="wrapper">
         <main>
             <div class="post-view-container">
-                <div class="post-image">
-                    <img src="assets/img/album_back10.jpg" alt="Post Image">
+                <div class="post-view-container-inner">
+                    <div class="post-image">
+                        <img src="assets/img/album_back10.jpg" alt="Post Image">
+                    </div>
+                    <div class="post-content">  
+                        <h1 id="post-title">글 제목</h1>
+                        <p id="post-body">글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                        <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
+                    </div>
                 </div>
-                <div class="post-content">
-                    <h1 id="post-title">글 제목</h1>
-                    <p id="post-body">글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    <p>글 내용이 여기에 표시됩니다. 이곳에 글의 내용을 적습니다.</p>
-                    
-                    <div class="post-actions">
-                    
-	                   
-                        <form action="#" method="POST">
-					        <button type="submit" name="action" value="like" class="button-like like-button">좋아요</button>
-					        <button type="submit" name="action" value="edit" class="button-like edit-button">수정</button>
-					        <button type="submit" name="action" value="delete" class="button-like delete-button">삭제</button>
-				   		</form>
+                <div class="post-actions">
+                    <button type="submit" name="retrun" value="retrun" class="button-retrun retrun-button"><img src="assets/img/return.png"></button>
+                    <div class="post-button-con">
+                        <button type="submit" name="action" value="like" class="button-like like-button"><img src="assets/img/good.png"></button>
+                    </div>
+                    <div class="post-button-container">
+                        <button type="submit" name="action" value="edit" class="button-like edit-button" ><img src="<%= request.getContextPath() %>/img/dog1.avif">수정</button>
+                        <button type="submit" name="action" value="delete" class="button-like delete-button"><img src="<%= request.getContextPath() %>/img/dog2.avif">삭제</button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-    <!-- 배너: 전체 너비로 설정 -->
+     <!-- 배너: 전체 너비로 설정 -->
     <section class="banner">
         <img src="assets/img/Base_banner.png" alt="Be Petmily Banner">
     </section>

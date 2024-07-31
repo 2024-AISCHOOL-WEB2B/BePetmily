@@ -1,21 +1,27 @@
 .post-view-container {
-    display: flex;
+   
     max-width: 800px;
     background: #fff;
     padding: 40px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 20px auto;
+
 }
 
-.post-image {
+.post-image {  /*이미지 가운데 정렬 및 크기 고정 */
     flex: 1;
     text-align: center;
+    margin-top: 15%;
+   
 }
 
 .post-image img {
     max-width: 100%;
     border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너에 맞게 자르기 */
 }
 
 .post-content {
@@ -36,37 +42,69 @@
 .post-actions {
     display: flex;
     gap: 10px;
+    justify-content: space-between;
    /* align-items: center;
     justify-content: center; /* 버튼을 중앙에 정렬 */
-    margin-left:50px;
-    
+
 }
+
+.post-actions img{
+    max-width: 100%;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너에 맞게 자르기 */
+}
+
 
 .post-actions button {
     padding: 8px 8px;
-    background-color: #FAE372;
+    display: flex; 
+    align-items: center; /*세로 가운데 정렬*/
+    background-color: #ffffff;
     border: none;
-    color: white;
-    font-size: 10px;
+    color: black;
+    font-size: 15px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     margin: 0 10px;
     margin-top: 100px;
-}
-
-.post-actions .like-button {
-    background-color: rgb(255, 179, 102);
-}
-
-.post-actions .edit-button {
-    background-color:  #f8b400;
-}
-
-.post-actions .delete-button {
-    background-color: rgb(255, 140, 26);
+    z-index: 1000;
+    font-family:'Gaegu','Arial', 'sans-serif';
+  
 }
 
 .post-actions button:hover {
     opacity: 0.8;
+        
+}
+
+.post-view-container-inner{
+    display: flex;
+    align-items: center; 
+    font-family: 'Gaegu', 'Arial', 'sans-serif';
+
+}
+.post-button-container{/*수정 삭제 되돌리기 글자 조절 */
+    display: flex;
+    align-items: center;
+    font-family: 'Gaegu', 'Arial', 'sans-serif';
+ 
+}
+
+.post-button-con{ /*좋아요 버튼 글자 조절*/
+    display: flex;
+    align-items: center;
+    font-family: 'Gaegu', 'Arial', 'sans-serif';
+
+}
+
+.post-button-con img{ /*좋아요 이미지 크기 조절*/
+    max-width: 100%;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너에 맞게 자르기 */
+    background-color: #f7dfdf;
 }
