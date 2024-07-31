@@ -11,6 +11,11 @@
             var pContent = document.getElementById("result").innerText;
             document.getElementById("hiddenInput").value = pContent;
         }
+
+        function submitForm() {
+            copyPContentToHiddenInput();
+            document.querySelector('form').submit();
+        }
     </script>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
     <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.2">
@@ -190,16 +195,7 @@
         </div>
     </footer>
     
-	    <script>
-		    function submitForm() {
-		        document.querySelector('form').submit();
-		    }
-		    
-		    function copyPContentToHiddenInput() {
-		        const resultText = document.getElementById('result').innerText;
-		        document.getElementById('hiddenInput').value = resultText;
-		    }
-		</script>
+	    
 
 </body>
 </html>
