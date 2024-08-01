@@ -23,8 +23,8 @@
 <br>
 
 ##  ⚙ 유스케이스
-<br>
-![유스케이스최종](https://github.com/user-attachments/assets/28f7d50c-4fd9-4d3e-8e07-7670c61b2642)
+
+![유스케이스최종](https://github.com/user-attachments/assets/57c42f05-40a0-42b1-b244-323f69ee92db)
 
 
 
