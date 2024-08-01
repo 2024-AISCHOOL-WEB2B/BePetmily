@@ -29,11 +29,11 @@
                 </li>
                 <li class="dropdown facilities-tab"><a>시설</a>
                     <div class="dropdown-content facilities-content">
-                        <a href="map.jsp?cate=hos&page=1">병원</a>
-                        <a href="map.jsp?cate=acco&page=1">숙박</a>
-                        <a href="map.jsp?cate=cafe&page=1">카페/식당</a>
-                        <a href="map.jsp?cate=etc&page=1">기타시설</a>
-                        <a href="map.jsp?cate=all&page=1">주변위치</a>
+                        <a href="map.jsp?cate=hos&page=1&refresh=true">병원</a>
+                        <a href="map.jsp?cate=acco&page=1&refresh=true">숙박</a>
+                        <a href="map.jsp?cate=cafe&page=1&refresh=true">카페/식당</a>
+                        <a href="map.jsp?cate=etc&page=1&refresh=true">기타시설</a>
+                        <a href="map.jsp?cate=all&page=1&refresh=true">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab"><a>맞춤형 정보</a>
@@ -131,11 +131,11 @@
                     <div class="footer-links">
                         <h3>애견 관련 시설</h3>
                         <ul>
-                            <li><a href="map.jsp?cate=hos&page=1">병원</a></li>
-                            <li><a href="map.jsp?cate=acco&page=1">숙박</a></li>
-                            <li><a href="map.jsp?cate=cafe&page=1">카페/식당</a></li>
-                            <li><a href="map.jsp?cate=etc&page=1">기타시설</a></li>
-                            <li><a href="map.jsp?cate=all&page=1">주변위치</a></li>
+                            <li><a href="map.jsp?cate=hos&page=1&refresh=true">병원</a></li>
+                            <li><a href="map.jsp?cate=acco&page=1&refresh=true">숙박</a></li>
+                            <li><a href="map.jsp?cate=cafe&page=1&refresh=true">카페/식당</a></li>
+                            <li><a href="map.jsp?cate=etc&page=1&refresh=true">기타시설</a></li>
+                            <li><a href="map.jsp?cate=all&page=1&refresh=true">주변위치</a></li>
                         </ul>
                     </div>
                     <div class="footer-links">
