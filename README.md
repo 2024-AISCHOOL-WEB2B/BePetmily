@@ -2,7 +2,9 @@
   # 🐾Be PetMily🐾
 
   ![bepetmily](https://github.com/user-attachments/assets/d3266b6f-27dd-4012-b4ae-79200d83b188)
+  
 
+<br>
 
 ## 👋 프로젝트 소개 
 <br>
@@ -22,7 +24,7 @@
 
 ##  ⚙ 유스케이스
 <br>
-![유스케이스최종](https://github.com/user-attachments/assets/c4a0c4c2-cea6-4616-b3ed-3ad8ef31d41f)
+![유스케이스최종](https://github.com/user-attachments/assets/54910e98-6ddf-4d9d-a38b-aa35e1591e35)
 
 
 ### ✨달성 목표✨
@@ -38,12 +40,17 @@
   </div>
 
 ## 💻Contributors💻
+All participants in this project 🖥🖱
+<br>
 <div align="center">
-
+  
 | **최재훈** | **최은화** | **정재호** | **박지광** |
 | :------: |  :------: | :------: | :------: |
 
-All participants in this project 🖥🖱
+
+</div>
+
+
 | Name             | Email                 | Github                           | Role      |
 |------------------|-----------------------|----------------------------------|-----------|
 | 🧒🏻Jae Hun Choi  | why7017@naver.com    |https://github.com/czarmagnate                  | Back-end |
