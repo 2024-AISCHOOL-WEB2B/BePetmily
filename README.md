@@ -24,7 +24,8 @@
 
 ##  ⚙ 유스케이스
 <br>
-![유스케이스최종](https://github.com/user-attachments/assets/54910e98-6ddf-4d9d-a38b-aa35e1591e35)
+![image](https://github.com/user-attachments/assets/4757a367-e068-4378-b786-dea79cdb8a1a)
+
 
 
 ### ✨달성 목표✨
