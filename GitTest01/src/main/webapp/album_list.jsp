@@ -101,10 +101,9 @@
                     <div class="album-item">
                     
                     <% if (post.getImgFile() != null && !post.getImgFile().isEmpty()) { %>
-                        <img src="<%= post.getImgFile() %>" alt="앨범 이미지">
+                      	<a href="post_view.jsp"><img src="<%= post.getImgFile() %>" alt="앨범 이미지"></a>
                          <% } %>
                         <h1><%= post.getTitle() %></h1>
-                        <p><%= post.getContent() %></p>
                     </div>
                     
                 <% 
