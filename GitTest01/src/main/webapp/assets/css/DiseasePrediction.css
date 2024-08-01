@@ -148,8 +148,18 @@ header {
     
 }
 
-.right-content {
-}
+.image-submit {
+            background: url('assets/img/predict_01.png') no-repeat ;
+            background-size: contain; /* 이미지가 버튼 크기에 맞게 조정됩니다. */
+            width: 100px; /* 버튼의 너비를 이미지 크기에 맞게 조정 */
+            height: 30px; /* 버튼의 높이를 이미지 크기에 맞게 조정 */
+            border: none; /* 기본 경계선을 제거 */
+            cursor: pointer; /* 마우스 포인터를 변경 */
+            text-indent: 20px; /* 텍스트를 화면에서 숨김 */
+            font-family: 'Gaegu','Arial', 'sans-serif' ;
+            margin-right: 10px;
+            
+        }
 
 .info-box h2 {
 	margin-top:50px;

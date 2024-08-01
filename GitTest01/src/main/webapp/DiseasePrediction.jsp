@@ -18,7 +18,7 @@
         }
     </script>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
-    <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.2">
+    <link rel="stylesheet" href="assets/css/DiseasePrediction.css?v1.3">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
@@ -91,14 +91,16 @@
                         %>
                             <div class="info-text"><h1>질병 이름</h1></div>
                             <form action="DiseasePredict" method="post" onsubmit="copyPContentToHiddenInput()">
-							   <p id="result">
-							       <% if (disease != null) { %>
-							           <%= disease.getDisName() %>
-							       <% } %>
-							   </p>
-							   <input type="hidden" id="hiddenInput" name="disName">
-							   <img src="assets/img/predict_01.png" alt="질병 정보 확인" onclick="submitForm("") style=" width:25px; height:25px;">정보 확인
-							</form>
+                            
+                               <p id="result">         
+                                 <%if (disease != null){ %>                      
+                                     <%= disease.getDisName() %> 
+                                  <% } %>
+                               </p>
+                               <input type="hidden" id="hiddenInput" name="disName">
+                                   <input type="submit" class="image-submit" value="질병 정보 확인">
+                      
+                            </form>
                         </div>
                         <div class="info-box large">
 
