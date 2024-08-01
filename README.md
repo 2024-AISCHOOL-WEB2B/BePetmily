@@ -24,7 +24,7 @@
 
 ##  ⚙ 유스케이스
 <br>
-![image](https://github.com/user-attachments/assets/4757a367-e068-4378-b786-dea79cdb8a1a)
+![유스케이스최종](https://github.com/user-attachments/assets/28f7d50c-4fd9-4d3e-8e07-7670c61b2642)
 
 
 
