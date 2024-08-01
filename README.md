@@ -43,13 +43,6 @@
 ## 💻Contributors💻
 All participants in this project 🖥🖱
 <br>
-<div align="center">
-  
-| **최재훈** | **최은화** | **정재호** | **박지광** |
-| :------: |  :------: | :------: | :------: |
-
-
-</div>
 
 
 | Name             | Email                 | Github                           | Role      |
