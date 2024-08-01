@@ -6,8 +6,8 @@
 
 ## 👋 프로젝트 소개 
 
-반려 동물 소유자에게 반려동물 관련 정보를 제공하는 💜 <br>
-원스톱 플랫폼입니다. 🐶🐶<br>
+* 반려 동물 소유자에게 반려동물 관련 정보를 제공하는 💜 <br>
+  원스톱 플랫폼입니다. 🐶🐶<br>
 
 ## 🌳 개발 내용
 -사용자 회원 가입/로그인 및 로그아웃/비밀번호 재설정<br>
@@ -31,6 +31,19 @@
   </div>
 
 ## 💻Contributors💻
+<div align="center">
+
+| **최재훈** | **최은화** | **정재호** | **박지광** |
+| :------: |  :------: | :------: | :------: |
+| [<img src="![재훈티비](https://github.com/user-attachments/assets/8720621b-49c6-487e-bcc8-635e0380fabf)
+" height=150 width=150> <br/> @czarmagnate](https://github.com/czarmagnate) | [<img src="![d55784ae4f27b9ee-sticker](https://github.com/user-attachments/assets/b1ca626a-bf32-42f1-ba30-408af249a769)
+" height=150 width=150> <br/> @choi-eunhwa](https://github.com/choi-eunhwa) | [<img src="![재호](https://github.com/user-attachments/assets/1aa7c7cf-7c98-455b-9b47-0a9481843192)
+" height=150 width=150> <br/> @LOOKSHINE0205](https://github.com/LOOKSHINE0205) | [<img src="![지광님](https://github.com/user-attachments/assets/99a652a4-9615-4630-bfed-d7501e219b13)
+" height=150 width=150> <br/> @Park-Ji-Gwang]( https://github.com/Park-Ji-Gwang) |
+
+</div>
+
+<br>
 All participants in this project 🖥🖱
 | Name             | Email                 | Github                           | Role      |
 |------------------|-----------------------|----------------------------------|-----------|
