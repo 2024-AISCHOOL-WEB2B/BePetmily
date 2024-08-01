@@ -40,6 +40,8 @@ public class UploadphotoServlet extends HttpServlet {
         
         authorID = session.getAttribute("login_id").toString();
         
+        
+        
 
         // 파일 업로드 처리
         String imgFile = null;
@@ -75,6 +77,7 @@ public class UploadphotoServlet extends HttpServlet {
             response.sendRedirect("error.jsp?msg=" + URLEncoder.encode("파일 업로드 오류.", "UTF-8"));
             return;
         }
+        response.sendRedirect("postList");
 
         // DTO 준비 및 DB에 저장
         MemberDTO dto = new MemberDTO();
@@ -96,15 +99,21 @@ public class UploadphotoServlet extends HttpServlet {
                 posts = dao.getAllPosts(); // 모든 게시물 조회
                 request.setAttribute("posts", posts); // 게시물 목록을 request에 설정
 //                response.sendRedirect("board.jsp"); // 성공 시 게시판 페이지로 리디렉션
-                request.getRequestDispatcher("album_list.jsp").forward(request, response);
+                if (!response.isCommitted()) {
+                	request.getRequestDispatcher("album_list.jsp").forward(request, response);
+                }
             } else {
                 System.out.println("게시물 저장 실패");
-                response.sendRedirect("error.jsp?msg=" + URLEncoder.encode("게시물 저장 실패.", "UTF-8"));
+                if (!response.isCommitted()) {
+                	response.sendRedirect("error.jsp?msg=" + URLEncoder.encode("게시물 저장 실패.", "UTF-8"));
+                }
             }
             
         } catch (SQLException e) {
             e.printStackTrace();
-            response.sendRedirect("error.jsp?msg=" + URLEncoder.encode("데이터베이스 저장 오류.", "UTF-8"));
+            if (!response.isCommitted()) {
+            	response.sendRedirect("error.jsp?msg=" + URLEncoder.encode("데이터베이스 저장 오류.", "UTF-8"));
+            }
         } finally {
             if (dao != null) {
                 dao.close(); // DAO 연결 종료

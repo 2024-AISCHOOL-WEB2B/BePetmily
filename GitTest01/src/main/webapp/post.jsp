@@ -76,7 +76,7 @@
                     <h1>글쓰기</h1>
                     <form action="UploadphotoServlet" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="title">글쓰기</label>
+                            <label for="title">제목</label>
                             <input type="text" id="title" name="title" required>
                         </div>
                         <div class="form-group">

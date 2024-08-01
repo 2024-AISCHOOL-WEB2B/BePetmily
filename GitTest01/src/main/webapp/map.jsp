@@ -11,10 +11,22 @@
     <title>사용자 위치 기반 서비스</title>
     <link rel="stylesheet" href="assets/css/Base_style.css?v1.1">
     <link rel="stylesheet" href="assets/css/map3.css?v1.1">
+	<script>
+    window.addEventListener('load', function() {
+        // URLSearchParams 사용하여 변수 확인
+        const urlParams = new URLSearchParams(window.location.search);
+        const refresh = urlParams.get('refresh');
+        if (refresh === 'true') {
+            setTimeout(function() {
+                // refresh 파라미터를 false로 설정하여 새로고침
+                urlParams.set('refresh', 'false');
+                window.location.search = urlParams.toString();
+            }, 800); // 0.8초(800ms) 후에 페이지를 새로고침
+        }
+    });
+	</script>
 </head>
-<body>
-	
-
+<body>	
     <header>
         <div class="logo">
             <a href="main.jsp"><img src="assets/img/Base_logo.png" alt="Be Petmily Logo"></a>
@@ -35,11 +47,11 @@
                 <li class="dropdown facilities-tab">
                     <a>시설</a>
                     <div class="dropdown-content facilities-content">
-                        <a href="map.jsp?cate=hos&page=1">병원</a>
-                        <a href="map.jsp?cate=acco&page=1">숙박</a>
-                        <a href="map.jsp?cate=cafe&page=1">카페/식당</a>
-                        <a href="map.jsp?cate=etc&page=1">기타시설</a>
-                        <a href="map.jsp?cate=all&page=1">주변위치</a>
+                        <a href="map.jsp?cate=hos&page=1&refresh=true">병원</a>
+                        <a href="map.jsp?cate=acco&page=1&refresh=true">숙박</a>
+                        <a href="map.jsp?cate=cafe&page=1&refresh=true">카페/식당</a>
+                        <a href="map.jsp?cate=etc&page=1&refresh=true">기타시설</a>
+                        <a href="map.jsp?cate=all&page=1&refresh=true">주변위치</a>
                     </div>
                 </li>
                 <li class="dropdown health-tab">
@@ -101,14 +113,18 @@
                     <ul id="places-list">
                         <!-- 가까운 장소 목록이 여기에 추가됩니다 -->
                         <%if ( facs != null){
-                        	for (FacDTO fac : facs) {%>
-                        	<li>
-                        		<strong>건물 이름:</strong><%= fac.getFacName() %> <br>
-                        		<strong>주소:</strong> <%= fac.getFacAddress() %><br>
-                        		<strong>전화번호:</strong><%= fac.getFacTel() %> <br>
+                        	for(int i = (curPage-1)*8 + 1 ; i <= curPage*8 ; i++){
+                        		FacDTO fac = facs.get(i); %>
+                        		<li>
+	                        		<strong>건물 이름:</strong><%= fac.getFacName() %> <br>
+	                        		<strong>주소:</strong> <%= fac.getFacAddress() %><br>
+	                        		<strong>전화번호:</strong><%= fac.getFacTel() %> <br>
+	                        	</li>
                         	<% } %>
-                        	</li>
-            	        <% }else {
+                        		
+                        	
+
+            	        <% } else {
 						    out.println("시설을 찾을 수 없습니다.<br>");
 						}%>                        	
 <%--                         <%if ( distances != null){						<!--거리 계산 다시하기 -->
@@ -124,11 +140,11 @@
                 </div>
             </section>
            	<div class="pagination">
-                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() - 1 %>" class="prev-page">&laquo;</a>
+                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() - 1 %>&refresh=true" class="prev-page">&laquo;</a>
                 <% for (int i = pages.getStartPage(); i <= pages.getEndPage(); i++) { %>
-                    <a href="item_list.jsp?cate=<%=cate%>&page=<%= i %>" class="page-number"><%= i %></a>
+                    <a href="item_list.jsp?cate=<%=cate%>&page=<%= i %>&refresh=true" class="page-number"><%= i %></a>
                 <% } %>
-                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() + 1 %>" class="next-page">&raquo;</a>                
+                <a href="item_list.jsp?cate=<%= cate %>&page=<%= pages.getCurPage() + 1 %>&refresh=true" class="next-page">&raquo;</a>                
             </div>
         </main>
     </div>        
@@ -156,11 +172,11 @@
                 <div class="footer-links">
                     <h3>애견 관련 시설</h3>
                     <ul>
-                        <li><a href="map.jsp?cate=hos&page=1">병원</a></li>
-                        <li><a href="map.jsp?cate=acco&page=1">숙박</a></li>
-                        <li><a href="map.jsp?cate=cafe&page=1">카페/식당</a></li>
-                        <li><a href="map.jsp?cate=etc&page=1">기타시설</a></li>
-                        <li><a href="map.jsp?cate=all&page=1">주변위치</a></li>
+                        <li><a href="map.jsp?cate=hos&page=1&refresh=true">병원</a></li>
+                        <li><a href="map.jsp?cate=acco&page=1&refresh=true">숙박</a></li>
+                        <li><a href="map.jsp?cate=cafe&page=1&refresh=true">카페/식당</a></li>
+                        <li><a href="map.jsp?cate=etc&page=1&refresh=true">기타시설</a></li>
+                        <li><a href="map.jsp?cate=all&page=1&refresh=true">주변위치</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
