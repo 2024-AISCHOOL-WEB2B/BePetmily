@@ -113,7 +113,7 @@
                     <ul id="places-list">
                         <!-- 가까운 장소 목록이 여기에 추가됩니다 -->
                         <%if ( facs != null){
-                        	for(int i = (curPage-1)*8 + 1 ; i <= curPage*8 ; i++){
+                        	for(int i = (curPage-1)*8 ; i < curPage*8 ; i++){
                         		FacDTO fac = facs.get(i); %>
                         		<li>
 	                        		<strong>건물 이름:</strong><%= fac.getFacName() %> <br>
