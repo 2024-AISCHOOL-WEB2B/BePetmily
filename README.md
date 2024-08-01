@@ -35,8 +35,8 @@
 
 | **최재훈** | **최은화** | **정재호** | **박지광** |
 | :------: |  :------: | :------: | :------: |
-| [<img src="![재훈티비](https://github.com/user-attachments/assets/8720621b-49c6-487e-bcc8-635e0380fabf)
-" height=150 width=150> <br/> @czarmagnate](https://github.com/czarmagnate) | [<img src="![d55784ae4f27b9ee-sticker](https://github.com/user-attachments/assets/b1ca626a-bf32-42f1-ba30-408af249a769)
+| [<img src="https://github.com/user-attachments/assets/8720621b-49c6-487e-bcc8-635e0380fabf
+" height=150 width=150> <br/> @czarmagnate](https://github.com/czarmagnate) | [<img src="d55784ae4f27b9ee-sticker](https://github.com/user-attachments/assets/b1ca626a-bf32-42f1-ba30-408af249a769"
 " height=150 width=150> <br/> @choi-eunhwa](https://github.com/choi-eunhwa) | [<img src="![재호](https://github.com/user-attachments/assets/1aa7c7cf-7c98-455b-9b47-0a9481843192)
 " height=150 width=150> <br/> @LOOKSHINE0205](https://github.com/LOOKSHINE0205) | [<img src="![지광님](https://github.com/user-attachments/assets/99a652a4-9615-4630-bfed-d7501e219b13)
 " height=150 width=150> <br/> @Park-Ji-Gwang]( https://github.com/Park-Ji-Gwang) |
